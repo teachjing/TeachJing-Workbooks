@@ -1,0 +1,616 @@
+{
+  "version": "Notebook/1.0",
+  "items": [
+    {
+      "type": 1,
+      "content": {
+        "json": "## Mitre Evaluation Workbook\nReview the latest 2020 Mitre Evaluation here [Mitre Evaluation](https://attackevals.mitre-engenuity.org/enterprise/participants/?rounds=carbanak_fin7) \n\nMITRE Engenuity does not assign scores, rankings, or ratings. The evaluation results are available to the public, so other organizations may provide their own analysis and interpretation - these are not endorsed or validated by MITRE Engenuity."
+      },
+      "name": "text - 2"
+    },
+    {
+      "type": 9,
+      "content": {
+        "version": "KqlParameterItem/1.0",
+        "parameters": [
+          {
+            "id": "2c5b1707-0234-4b5d-ba64-ec605b468eb5",
+            "version": "KqlParameterItem/1.0",
+            "name": "Evaluation",
+            "type": 2,
+            "isRequired": true,
+            "query": "let mitre = adx(\"https://teachjing.westus.kusto.windows.net/securitydata\").mitreeval;\r\nmitre\r\n| extend Adversaries = (todynamic(Aggregate_Data))['Evaluation_Aggregate_Data']['Adversaries']\r\n| mv-expand Adversaries\r\n| evaluate bag_unpack(Adversaries)\r\n| distinct Display_Name",
+            "value": "Carbanak+FIN7",
+            "typeSettings": {
+              "additionalResourceOptions": [],
+              "showDefault": false
+            },
+            "timeContext": {
+              "durationMs": 86400000
+            },
+            "queryType": 0,
+            "resourceType": "microsoft.operationalinsights/workspaces"
+          },
+          {
+            "id": "f7b008ed-00f4-4310-a5cd-4c01171f2d38",
+            "version": "KqlParameterItem/1.0",
+            "name": "Vendor",
+            "type": 2,
+            "query": "let mitre = adx(\"https://teachjing.westus.kusto.windows.net/securitydata\").mitreeval;\r\nmitre\r\n| distinct Participant_Name\r\n| sort by Participant_Name asc",
+            "value": "Microsoft",
+            "typeSettings": {
+              "additionalResourceOptions": [],
+              "showDefault": false
+            },
+            "queryType": 0,
+            "resourceType": "microsoft.operationalinsights/workspaces"
+          }
+        ],
+        "style": "pills",
+        "queryType": 0,
+        "resourceType": "microsoft.operationalinsights/workspaces"
+      },
+      "name": "parameters - 4"
+    },
+    {
+      "type": 11,
+      "content": {
+        "version": "LinkItem/1.0",
+        "style": "tabs",
+        "links": [
+          {
+            "id": "c8419670-ada8-48ce-8b8e-c5d6cb9a8e0e",
+            "cellValue": "tab",
+            "linkTarget": "parameter",
+            "linkLabel": "Evaluation Overview",
+            "subTarget": "overview",
+            "preText": "Evaluation Overview",
+            "style": "link"
+          },
+          {
+            "id": "2d5e3ce8-ad15-42c9-8f2d-49a013daa871",
+            "cellValue": "tab",
+            "linkTarget": "parameter",
+            "linkLabel": "Specific Vendor Details",
+            "subTarget": "vendorDetails",
+            "preText": "Evaluation Details",
+            "style": "link"
+          },
+          {
+            "id": "f1ca0058-93eb-4d98-bc26-a84e184c8fcc",
+            "cellValue": "tab",
+            "linkTarget": "parameter",
+            "linkLabel": "Protection Results",
+            "subTarget": "protectionResults",
+            "style": "link"
+          }
+        ]
+      },
+      "name": "links - 7"
+    },
+    {
+      "type": 9,
+      "content": {
+        "version": "KqlParameterItem/1.0",
+        "parameters": [
+          {
+            "id": "725441d5-d6c7-4577-a108-ec64bf361d5f",
+            "version": "KqlParameterItem/1.0",
+            "name": "SelectedScenario",
+            "label": "Scenario",
+            "type": 2,
+            "query": "let mitre = adx(\"https://teachjing.westus.kusto.windows.net/securitydata\").mitreeval;\r\nmitre\r\n| mv-expand Adversaries\r\n| where Adversaries['Display_Name'] == \"{Evaluation}\"\r\n| where Participant_Name == \"Microsoft\"\r\n| mv-expand Scenarios = Adversaries['Detections_By_Step']\r\n| mv-apply Scenarios on (\r\n    extend Scenario = tostring(bag_keys(Scenarios)[0])\r\n    | extend Steps = Scenarios[Scenario]['Steps']\r\n)\r\n| distinct Scenario",
+            "value": "Scenario_1",
+            "typeSettings": {
+              "additionalResourceOptions": [],
+              "showDefault": false
+            },
+            "timeContext": {
+              "durationMs": 86400000
+            },
+            "queryType": 0,
+            "resourceType": "microsoft.operationalinsights/workspaces"
+          }
+        ],
+        "style": "pills",
+        "queryType": 0,
+        "resourceType": "microsoft.operationalinsights/workspaces"
+      },
+      "conditionalVisibility": {
+        "parameterName": "tab",
+        "comparison": "isEqualTo",
+        "value": "vendorDetails"
+      },
+      "name": "Scenario List"
+    },
+    {
+      "type": 1,
+      "content": {
+        "json": "## {Vendor} Mitre Results for {Evaluation}"
+      },
+      "name": "text - 11"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "let mitre = adx(\"https://teachjing.westus.kusto.windows.net/securitydata\").mitreeval;\r\nmitre\r\n| extend Adversaries = (todynamic(Aggregate_Data))['Evaluation_Aggregate_Data']['Adversaries']\r\n| mv-expand Adversaries\r\n| evaluate bag_unpack(Adversaries)\r\n| where Display_Name == \"{Evaluation}\"\r\n| project Participant_Name, Display_Name, Linux_Participant, Total_Detections, Analytic_Detections, Telemetry_Detections, Visibility\r\n| extend Link = \"https://attackevals.mitre-engenuity.org/enterprise/participants/microsoft/results.html?adversary=carbanak_fin7\"\r\n| sort by Total_Detections",
+        "size": 0,
+        "title": "Select Vendor here and proceed to the next tab",
+        "timeContext": {
+          "durationMs": 86400000
+        },
+        "exportFieldName": "Participant_Name",
+        "exportParameterName": "Vendor",
+        "exportDefaultValue": "Microsoft",
+        "queryType": 0,
+        "resourceType": "microsoft.operationalinsights/workspaces",
+        "visualization": "table",
+        "gridSettings": {
+          "formatters": [
+            {
+              "columnMatch": "Participant_Name",
+              "formatter": 18,
+              "formatOptions": {
+                "thresholdsOptions": "colors",
+                "thresholdsGrid": [
+                  {
+                    "operator": "==",
+                    "thresholdValue": "Microsoft",
+                    "representation": "blue",
+                    "text": "{0}{1}"
+                  },
+                  {
+                    "operator": "Default",
+                    "thresholdValue": null,
+                    "text": "{0}{1}"
+                  }
+                ]
+              }
+            },
+            {
+              "columnMatch": "Linux_Participant",
+              "formatter": 18,
+              "formatOptions": {
+                "thresholdsOptions": "icons",
+                "thresholdsGrid": [
+                  {
+                    "operator": "==",
+                    "thresholdValue": "true",
+                    "representation": "success",
+                    "text": "True"
+                  },
+                  {
+                    "operator": "==",
+                    "thresholdValue": "false",
+                    "representation": "cancelled",
+                    "text": "False"
+                  },
+                  {
+                    "operator": "Default",
+                    "thresholdValue": null,
+                    "representation": "success",
+                    "text": "{0}{1}"
+                  }
+                ],
+                "compositeBarSettings": {
+                  "labelText": "",
+                  "columnSettings": []
+                }
+              }
+            },
+            {
+              "columnMatch": "Total_Detections",
+              "formatter": 4,
+              "formatOptions": {
+                "palette": "blue",
+                "compositeBarSettings": {
+                  "labelText": "",
+                  "columnSettings": []
+                }
+              }
+            },
+            {
+              "columnMatch": "Analytic_Detections",
+              "formatter": 4,
+              "formatOptions": {
+                "palette": "blue"
+              }
+            },
+            {
+              "columnMatch": "Telemetry_Detections",
+              "formatter": 4,
+              "formatOptions": {
+                "palette": "blue"
+              }
+            },
+            {
+              "columnMatch": "Link",
+              "formatter": 7,
+              "formatOptions": {
+                "linkTarget": "Url",
+                "linkLabel": "Click here to review Mitre Evaluation"
+              }
+            },
+            {
+              "columnMatch": "link",
+              "formatter": 7,
+              "formatOptions": {
+                "linkTarget": "Url"
+              }
+            }
+          ]
+        },
+        "sortBy": [],
+        "tileSettings": {
+          "showBorder": false,
+          "titleContent": {
+            "columnMatch": "Participant_Name",
+            "formatter": 1
+          },
+          "leftContent": {
+            "columnMatch": "Total_Detections",
+            "formatter": 12,
+            "formatOptions": {
+              "palette": "auto"
+            },
+            "numberFormat": {
+              "unit": 17,
+              "options": {
+                "maximumSignificantDigits": 3,
+                "maximumFractionDigits": 2
+              }
+            }
+          }
+        }
+      },
+      "conditionalVisibility": {
+        "parameterName": "tab",
+        "comparison": "isEqualTo",
+        "value": "overview"
+      },
+      "name": "query - 2"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "let mitre = adx(\"https://teachjing.westus.kusto.windows.net/securitydata\").mitreeval;\r\nmitre\r\n| extend Adversaries = (todynamic(Aggregate_Data))['Evaluation_Aggregate_Data']['Adversaries']\r\n| mv-expand Adversaries\r\n| evaluate bag_unpack(Adversaries)\r\n| where Adversary_Name == \"carbanak_fin7\"\r\n| project Participant_Name, Display_Name, Total_Detections\r\n| sort by Total_Detections",
+        "size": 0,
+        "title": "Total Detections Result",
+        "timeContext": {
+          "durationMs": 86400000
+        },
+        "queryType": 0,
+        "resourceType": "microsoft.operationalinsights/workspaces",
+        "visualization": "categoricalbar",
+        "chartSettings": {
+          "group": null,
+          "createOtherGroup": 0
+        }
+      },
+      "conditionalVisibility": {
+        "parameterName": "tab",
+        "comparison": "isEqualTo",
+        "value": "overview"
+      },
+      "name": "query - 2"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "let mitre = adx(\"https://teachjing.westus.kusto.windows.net/securitydata\").mitreeval;\r\nmitre\r\n| extend Adversaries = (todynamic(Aggregate_Data))['Evaluation_Aggregate_Data']['Adversaries']\r\n| mv-expand Adversaries\r\n| evaluate bag_unpack(Adversaries)\r\n| where Adversary_Name == \"carbanak_fin7\"\r\n| project Participant_Name, Display_Name, Linux_Participant, Total_Detections, Analytic_Detections, Telemetry_Detections, Visibility\r\n| sort by Total_Detections",
+        "size": 0,
+        "title": "Telemetry + Analytic Detections",
+        "timeContext": {
+          "durationMs": 86400000
+        },
+        "queryType": 0,
+        "resourceType": "microsoft.operationalinsights/workspaces",
+        "visualization": "unstackedbar",
+        "chartSettings": {
+          "xAxis": "Participant_Name",
+          "yAxis": [
+            "Analytic_Detections",
+            "Telemetry_Detections"
+          ],
+          "showMetrics": false,
+          "showLegend": true
+        }
+      },
+      "conditionalVisibility": {
+        "parameterName": "tab",
+        "comparison": "isEqualTo",
+        "value": "overview"
+      },
+      "name": "Telemetry + Analytic Detections"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "{\"version\":\"CustomEndpoint/1.0\",\"data\":null,\"headers\":[],\"method\":\"GET\",\"url\":\"https://attackevals.mitre-engenuity.org/downloadable_JSON/Microsoft_Results.json\",\"contentType\":\"text/plain\",\"urlParams\":[],\"transformers\":[{\"type\":\"jsonpath\",\"settings\":{\"tablePath\":\"$.Aggregate_Data.Evaluation_Aggregate_Data.*\",\"columns\":[]}}],\"ignoreStandardHeaders\":true}",
+        "size": 0,
+        "queryType": 10
+      },
+      "conditionalVisibility": {
+        "parameterName": "tab",
+        "comparison": "isEqualTo",
+        "value": "test"
+      },
+      "name": "query - 5"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "{\"version\":\"CustomEndpoint/1.0\",\"data\":null,\"headers\":[],\"method\":\"GET\",\"url\":\"https://attackevals.mitre-engenuity.org/downloadable_JSON/Microsoft_Results.json\",\"contentType\":\"text/plain\",\"urlParams\":[],\"transformers\":[{\"type\":\"jsonpath\",\"settings\":{\"tablePath\":\"$.Adversaries[?(@.Adversary_Name==\\\"carbanak_fin7\\\")].Detections_By_Step.*.*.*\",\"columns\":[]}}],\"ignoreStandardHeaders\":true}",
+        "size": 0,
+        "queryType": 10
+      },
+      "conditionalVisibility": {
+        "parameterName": "tab",
+        "comparison": "isEqualTo",
+        "value": "test"
+      },
+      "name": "query - 6"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "let mitre = adx(\"https://teachjing.westus.kusto.windows.net/securitydata\").mitreeval;\r\nmitre\r\n| project Participant_Name, Adversaries\r\n| mv-expand Adversaries\r\n| where Adversaries['Adversary_Name'] == \"carbanak_fin7\"\r\n| where Participant_Name == \"{Vendor}\"\r\n| mv-expand Scenarios = Adversaries['Detections_By_Step']\r\n| mv-apply Scenarios on (\r\n    extend Scenario = tostring(bag_keys(Scenarios)[0])\r\n    | extend Steps = Scenarios[Scenario]['Steps']\r\n)\r\n| where Scenario == \"{SelectedScenario}\"\r\n| mv-expand Steps\r\n| project-away Adversaries, Scenarios\r\n| evaluate bag_unpack(Steps)\r\n| extend totalsteps = array_length(Substeps)\r\n| project Step = Step_Num, Step_Name, Total_Steps = totalsteps",
+        "size": 0,
+        "timeContext": {
+          "durationMs": 86400000
+        },
+        "exportFieldName": "Step_Name",
+        "exportParameterName": "SelectedStep",
+        "queryType": 0,
+        "resourceType": "microsoft.operationalinsights/workspaces"
+      },
+      "conditionalVisibility": {
+        "parameterName": "tab",
+        "comparison": "isEqualTo",
+        "value": "vendorDetails"
+      },
+      "name": "query - 8"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "let mitre = adx(\"https://teachjing.westus.kusto.windows.net/securitydata\").mitreeval;\r\nmitre\r\n| project Participant_Name, Adversaries\r\n| mv-expand Adversaries\r\n| where Adversaries['Adversary_Name'] == \"carbanak_fin7\"\r\n| where Participant_Name == \"Microsoft\"\r\n| mv-expand Scenarios = Adversaries['Detections_By_Step']\r\n| mv-apply Scenarios on (\r\n    extend Scenario = tostring(bag_keys(Scenarios)[0])\r\n    | extend Steps = Scenarios[Scenario]['Steps']\r\n)\r\n| where Scenario == \"{SelectedScenario}\"\r\n| mv-expand Steps\r\n| project-away Adversaries, Scenarios\r\n| evaluate bag_unpack(Steps)\r\n| extend totalsteps = array_length(Substeps)\r\n| where Step_Name == \"{SelectedStep}\"\r\n| mv-expand Substeps\r\n| evaluate bag_unpack(Substeps)\r\n| evaluate bag_unpack(Tactic)\r\n| evaluate bag_unpack(Technique)\r\n| evaluate bag_unpack(Subtechnique)\r\n| evaluate bag_unpack(Detections)\r\n| project Step_Name, Substep, Criteria, Detections, Tactic_Id, Tactic_Name, Technique_Id, Technique_Name, Subtechnique_Id, Subtechnique_Name",
+        "size": 0,
+        "title": "Sub Steps",
+        "noDataMessage": "Please select a parent step to view corresponding sub steps",
+        "noDataMessageStyle": 4,
+        "timeContext": {
+          "durationMs": 86400000
+        },
+        "queryType": 0,
+        "resourceType": "microsoft.operationalinsights/workspaces"
+      },
+      "conditionalVisibility": {
+        "parameterName": "tab",
+        "comparison": "isEqualTo",
+        "value": "vendorResults"
+      },
+      "name": "query - 10"
+    },
+    {
+      "type": 12,
+      "content": {
+        "version": "NotebookGroup/1.0",
+        "groupType": "editable",
+        "title": "Protection Results",
+        "items": [
+          {
+            "type": 3,
+            "content": {
+              "version": "KqlItem/1.0",
+              "query": "let mitreeval = adx(\"https://teachjing.westus.kusto.windows.net/securitydata\").mitreeval;\r\nlet Protections = mitreeval\r\n| project Participant_Name, Adversaries | mv-expand Adversaries\r\n| where \r\n    Adversaries.Display_Name == \"{Evaluation}\" \r\n    and isnotempty(Adversaries.Protections)\r\n    and Participant_Name == \"{Vendor}\"\r\n| project \r\n    Participant_Name, \r\n    Adversary_Name = Adversaries.Adversary_Name, \r\n    Protections = Adversaries.Protections\r\n| mv-expand Protections = Protections.Protection_Tests | evaluate bag_unpack(Protections)\r\n| mv-expand Substeps\r\n| evaluate bag_unpack(Substeps);\r\nlet blocked = Protections\r\n| distinct Test_Num\r\n| join kind=leftouter (Protections | where Protection_Type == \"Blocked\") on Test_Num\r\n| project Test_Num, Result = iff(Protection_Type ==\"Blocked\", \"Blocked\", \"Executed Successfully\");\r\nProtections | join kind=leftouter blocked on Test_Num\r\n| evaluate pivot(Result)\r\n| extend [\"Executed Successfully\"] = column_ifexists(\"Executed Successfully\", 0)\r\n| summarize Blocked = sum(Blocked), Executed = sum(['Executed Successfully']) by tostring(Tactic.Tactic_Name)",
+              "size": 0,
+              "title": "Protection Results by Tactic",
+              "noDataMessage": "No result",
+              "timeContext": {
+                "durationMs": 86400000
+              },
+              "queryType": 0,
+              "resourceType": "microsoft.operationalinsights/workspaces",
+              "visualization": "categoricalbar",
+              "chartSettings": {
+                "xAxis": "Tactic_Tactic_Name",
+                "yAxis": [
+                  "Blocked",
+                  "Executed"
+                ],
+                "showMetrics": false,
+                "showLegend": true,
+                "seriesLabelSettings": [
+                  {
+                    "seriesName": "Blocked",
+                    "color": "blue"
+                  },
+                  {
+                    "seriesName": "Executed",
+                    "color": "redBright"
+                  }
+                ]
+              }
+            },
+            "customWidth": "50",
+            "name": "query - 14"
+          },
+          {
+            "type": 3,
+            "content": {
+              "version": "KqlItem/1.0",
+              "query": "let mitreeval = adx(\"https://teachjing.westus.kusto.windows.net/securitydata\").mitreeval;\r\nlet Protections = mitreeval\r\n| project Participant_Name, Adversaries | mv-expand Adversaries\r\n| where \r\n    Adversaries.Display_Name == \"{Evaluation}\" \r\n    and isnotempty(Adversaries.Protections)\r\n    and Participant_Name == \"{Vendor}\"\r\n| project \r\n    Participant_Name, \r\n    Adversary_Name = Adversaries.Adversary_Name, \r\n    Protections = Adversaries.Protections\r\n| mv-expand Protections = Protections.Protection_Tests | evaluate bag_unpack(Protections)\r\n| mv-expand Substeps\r\n| evaluate bag_unpack(Substeps);\r\nlet blocked = Protections\r\n| distinct Test_Num\r\n| join kind=leftouter (Protections | where Protection_Type == \"Blocked\") on Test_Num\r\n| project Test_Num, Result = iff(Protection_Type ==\"Blocked\", \"Blocked\", \"Executed Successfully\");\r\nProtections | join kind=leftouter blocked on Test_Num\r\n| evaluate pivot(Result)\r\n| extend [\"Executed Successfully\"] = column_ifexists(\"Executed Successfully\", 0)\r\n| summarize Blocked = sum(Blocked), Executed = sum(['Executed Successfully']) by tostring(Tactic.Tactic_Name)",
+              "size": 0,
+              "title": "Protection Results by Tactic",
+              "noDataMessage": "No result",
+              "timeContext": {
+                "durationMs": 86400000
+              },
+              "queryType": 0,
+              "resourceType": "microsoft.operationalinsights/workspaces",
+              "visualization": "piechart",
+              "tileSettings": {
+                "showBorder": false,
+                "titleContent": {
+                  "columnMatch": "Tactic_Tactic_Name",
+                  "formatter": 1
+                },
+                "leftContent": {
+                  "columnMatch": "Blocked",
+                  "formatter": 12,
+                  "formatOptions": {
+                    "palette": "auto"
+                  },
+                  "numberFormat": {
+                    "unit": 17,
+                    "options": {
+                      "maximumSignificantDigits": 3,
+                      "maximumFractionDigits": 2
+                    }
+                  }
+                }
+              },
+              "chartSettings": {
+                "xAxis": "Tactic_Tactic_Name",
+                "yAxis": [
+                  "Blocked",
+                  "Executed"
+                ],
+                "showLegend": true,
+                "seriesLabelSettings": [
+                  {
+                    "seriesName": "Blocked",
+                    "color": "blue"
+                  },
+                  {
+                    "seriesName": "Executed",
+                    "color": "redBright"
+                  }
+                ]
+              }
+            },
+            "customWidth": "50",
+            "name": "query - 14 - Copy"
+          },
+          {
+            "type": 3,
+            "content": {
+              "version": "KqlItem/1.0",
+              "query": "let mitreeval = adx(\"https://teachjing.westus.kusto.windows.net/securitydata\").mitreeval;\r\nlet Protections = mitreeval\r\n| project Participant_Name, Adversaries | mv-expand Adversaries\r\n| where \r\n    Adversaries.Display_Name == \"{Evaluation}\" \r\n    and isnotempty(Adversaries.Protections)\r\n    and Participant_Name == \"{Vendor}\"\r\n| project \r\n    Participant_Name, \r\n    Adversary_Name = Adversaries.Adversary_Name, \r\n    Protections = Adversaries.Protections\r\n| mv-expand Protections = Protections.Protection_Tests | evaluate bag_unpack(Protections)\r\n| mv-expand Substeps\r\n| evaluate bag_unpack(Substeps);\r\nlet blocked = Protections\r\n| distinct Test_Num\r\n| join kind=leftouter (Protections | where Protection_Type == \"Blocked\") on Test_Num\r\n| project Test_Num, Result = iff(Protection_Type ==\"Blocked\", \"Blocked\", \"Techniques Executed successfully\");\r\nProtections | join kind=leftouter blocked on Test_Num\r\n| where Result != \"Blocked\"\r\n| project Test_Group, Test_Num, Test_Name, Test_Description, Criteria, Protection_Type, Result\r\n| sort by Test_Num",
+              "size": 0,
+              "title": "Techniques where {Vendor} failed to protect against",
+              "timeContext": {
+                "durationMs": 86400000
+              },
+              "queryType": 0,
+              "resourceType": "microsoft.operationalinsights/workspaces",
+              "gridSettings": {
+                "formatters": [
+                  {
+                    "columnMatch": "Result",
+                    "formatter": 18,
+                    "formatOptions": {
+                      "thresholdsOptions": "colors",
+                      "thresholdsGrid": [
+                        {
+                          "operator": "contains",
+                          "thresholdValue": "Executed",
+                          "representation": "yellow",
+                          "text": "{0}{1}"
+                        },
+                        {
+                          "operator": "Default",
+                          "thresholdValue": null,
+                          "text": "{0}{1}"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "conditionalVisibility": {
+              "parameterName": "tab",
+              "comparison": "isEqualTo",
+              "value": "protectionResults"
+            },
+            "name": "query - 12"
+          },
+          {
+            "type": 3,
+            "content": {
+              "version": "KqlItem/1.0",
+              "query": "let mitreeval = adx(\"https://teachjing.westus.kusto.windows.net/securitydata\").mitreeval;\r\nlet Protections = mitreeval\r\n| project Participant_Name, Adversaries | mv-expand Adversaries\r\n| where \r\n    Adversaries.Adversary_Name == \"carbanak_fin7\" \r\n    and isnotempty(Adversaries.Protections)\r\n    and Participant_Name == \"Cisco\"\r\n| project \r\n    Participant_Name, \r\n    Adversary_Name = Adversaries.Adversary_Name, \r\n    Protections = Adversaries.Protections\r\n| mv-expand Protections = Protections.Protection_Tests | evaluate bag_unpack(Protections)\r\n| mv-expand Substeps\r\n| evaluate bag_unpack(Substeps);\r\nlet blocked = Protections\r\n| distinct Test_Num\r\n| join kind=leftouter (Protections | where Protection_Type == \"Blocked\") on Test_Num\r\n| project Test_Num, Result = iff(Protection_Type ==\"Blocked\", \"Blocked\", \"Techniques Executed successfully\");\r\nProtections | join kind=leftouter blocked on Test_Num\r\n| summarize countif(Result != \"Blocked\") by tostring(Tactic.Tactic_Name)\r\n| where countif_ != 0",
+              "size": 4,
+              "title": "Tactics that Executed Successfully",
+              "timeContext": {
+                "durationMs": 86400000
+              },
+              "queryType": 0,
+              "resourceType": "microsoft.operationalinsights/workspaces",
+              "visualization": "tiles",
+              "tileSettings": {
+                "titleContent": {
+                  "columnMatch": "Tactic_Tactic_Name",
+                  "formatter": 1
+                },
+                "leftContent": {
+                  "columnMatch": "countif_",
+                  "formatter": 12,
+                  "formatOptions": {
+                    "palette": "auto"
+                  },
+                  "numberFormat": {
+                    "unit": 17,
+                    "options": {
+                      "style": "decimal",
+                      "maximumFractionDigits": 2,
+                      "maximumSignificantDigits": 3
+                    }
+                  }
+                },
+                "showBorder": false
+              },
+              "graphSettings": {
+                "type": 0,
+                "topContent": {
+                  "columnMatch": "Tactic_Tactic_Name",
+                  "formatter": 1
+                },
+                "centerContent": {
+                  "columnMatch": "countif_",
+                  "formatter": 1,
+                  "numberFormat": {
+                    "unit": 17,
+                    "options": {
+                      "maximumSignificantDigits": 3,
+                      "maximumFractionDigits": 2
+                    }
+                  }
+                }
+              }
+            },
+            "name": "query - 13"
+          }
+        ]
+      },
+      "conditionalVisibility": {
+        "parameterName": "tab",
+        "comparison": "isEqualTo",
+        "value": "protectionResults"
+      },
+      "name": "Protection Results"
+    }
+  ],
+  "fallbackResourceIds": [],
+  "fromTemplateId": "sentinel-UserWorkbook",
+  "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"
+}
