@@ -22,6 +22,7 @@
         },
         "logAnalyticsWorkspaceID": {
             "type": "string",
+            "defaultValue": "WorkspaceID, ASC will not need to fill this in",
             "metadata": {
             "description": "The id of log analytics workspace this will be under"
         }
