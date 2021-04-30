@@ -18,6 +18,7 @@ You can copy the workbook code and paste into the advanced editor or you can cli
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjingsta%2FTeachJing-Workbooks%2Fmain%2FSecurity%2FMitre_Evaluation_Workbook%2Fazuredeploy.json%0A)
 
 Video Guide
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/g_TsoTmmOeU/0.jpg)](https://www.youtube.com/watch?v=g_TsoTmmOeU)
 
 ## Screenshots
