@@ -14,6 +14,7 @@ You can use this workbook to help analyze the MITRE ATT&CK participant evaluatio
 ## How to install
 
 **Video Guide**
+
 <a href ="https://www.youtube.com/watch?v=g_TsoTmmOeU" target="_blank"><img src="https://img.youtube.com/vi/g_TsoTmmOeU/0.jpg" width="200"></a>
 
 You can copy the workbook code and paste into the advanced editor or you can click deploy to Azure to deploy the workbook
