@@ -20,7 +20,7 @@ You can copy the workbook code and paste into the advanced editor or you can cli
 ## Screenshots
 
 Overall Result Summary
-![](./media/screenshot1.png)
+![](./media/screenshot1.PNG)
 
 Comparison Chart
-![](./media/screenshot2.png)
+![](./media/screenshot2.PNG)
