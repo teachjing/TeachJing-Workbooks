@@ -1,6 +1,7 @@
 # Mitre Evaluation Azure Workbook
 
 This workbook was created to analyze the latest Mitre 2020 evaluation and help organizations understand how participants did. 
+You can use this workbook to help analyze the MITRE ATT&CK participant evaluations. There are tabs on top that will take you to specific evaluations and a comparison tool.
 
 Features
 - Overall score summary
