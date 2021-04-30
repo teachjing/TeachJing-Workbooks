@@ -15,11 +15,11 @@ You can use this workbook to help analyze the MITRE ATT&CK participant evaluatio
 
 **Video Guide**
 
-<a href ="https://www.youtube.com/watch?v=g_TsoTmmOeU" target="_blank"><img src="https://img.youtube.com/vi/g_TsoTmmOeU/0.jpg" width="200"></a>
+<a href ="https://www.youtube.com/watch?v=g_TsoTmmOeU" target='_blank'><img src="https://img.youtube.com/vi/g_TsoTmmOeU/0.jpg" width="200"></a>
 
 You can copy the workbook code and paste into the advanced editor or you can click deploy to Azure to deploy the workbook
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjingsta%2FTeachJing-Workbooks%2Fmain%2FSecurity%2FMitre_Evaluation_Workbook%2Fazuredeploy.json%0A)
+<a href ="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjingsta%2FTeachJing-Workbooks%2Fmain%2FSecurity%2FMitre_Evaluation_Workbook%2Fazuredeploy.json%0A" target='_blank'><img src="https://aka.ms/deploytoazurebutton" width="150"></a>
 
 ## Screenshots
 
