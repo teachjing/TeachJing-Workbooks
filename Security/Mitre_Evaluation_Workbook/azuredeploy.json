@@ -15,14 +15,14 @@
             "Azure Security Center",
             "Log Analytics"
             ],
-            "defaultValue": "Azure Sentinel",
+            "defaultValue": "Azure Security Center",
             "metadata": {
             "description": "Location where to put the workbook"
             }
         },
         "logAnalyticsWorkspaceID": {
             "type": "string",
-            "defaultValue": "WorkspaceID, ASC will not need to fill this in",
+            "defaultValue": "Not required for Azure Security Center, but is needed for Sentinel/LA",
             "metadata": {
             "description": "The id of log analytics workspace this will be under"
         }
