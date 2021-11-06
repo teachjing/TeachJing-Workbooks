@@ -3,199 +3,444 @@
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/takeoperator\u003cbr/\u003e\u003cbr/\u003eThe take operator returns the number of specified rows. The results are taken at random unless the rows have been sorted prior to the take operator being called.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003eSecurityAlert | take 5\u003cbr/\u003e",
         "tab":  "Overview",
         "section":  "Take",
-        "exercises":  [
-                          "TakeEx1",
-                          "TakeEx2",
-                          "TakeEx3"
-                      ]
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "TakeEx1",
+                                            "question":  "Return 1 row from the Weather table in the default order"
+                                        },
+                                        {
+                                            "name":  "TakeEx2",
+                                            "question":  "Return 6 rows from the Weather table in the default order"
+                                        },
+                                        {
+                                            "name":  "TakeEx3",
+                                            "question":  "Return 10 rows from the Weather table in the default order"
+                                        }
+                                    ],
+                          "Count":  3
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/whereoperator\u003cbr/\u003e\u003cbr/\u003eThe where operator is the most commonly used operator within KQL. The where operator is used within every Kusto query. The where operator is used for filtering results based on specified criteria. This operator can be used with many other operators, such as equality oeprators, string operators, time based operators, and more.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003ewhere count_ \u003c 100\u003cbr/\u003ewhere Computer contains \u0027desktop\u0027\u003cbr/\u003ewhere TimeGenerated \u003c ago(1h)\u003cbr/\u003e",
         "tab":  "Overview",
         "section":  "Where",
-        "exercises":  [
-                          "WhereEx1",
-                          "WhereEx2"
-                      ]
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "WhereEx1",
+                                            "question":  "Return the newest row from Philadelphia in the Weather table"
+                                        },
+                                        {
+                                            "name":  "WhereEx2",
+                                            "question":  "Return the oldest row from Seattle in the Weather table"
+                                        }
+                                    ],
+                          "Count":  2
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/summarizeoperator\u003cbr/\u003e\u003cbr/\u003eThe summarize operator is used to aggregate the content of a table based on the listed column or columns. This is most useful when looking to cut down on the results shown while summarizing the columns of interest. Summarize can be used by itself or with other aggregaters such as count(), arg_max(), arg_min(), or avg(). Using multiple columns allows for stronger combinations within the results.\u003cbr/\u003eExample:\u003cbr/\u003esummarize count() by Title, ProviderName summarize arg_max(TimeGenerated, Computer)\u003cbr/\u003e",
         "tab":  "Overview",
         "section":  "Summarize",
-        "exercises":  [
-                          "SummarizeEx1",
-                          "SummarizeEx2",
-                          "SummarizeEx3",
-                          "SummarizeEx4",
-                          "SummarizeEx5"
-                      ]
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "SummarizeEx1",
+                                            "question":  "Return the number of distinct High temperatures found in the Weather table"
+                                        },
+                                        {
+                                            "name":  "SummarizeEx2",
+                                            "question":  "Return the number of rows with rainfall in the Weather table and the total rainfall accumulation"
+                                        },
+                                        {
+                                            "name":  "SummarizeEx3",
+                                            "question":  "Return a summary of Locations from the Weather table in descending order of Location"
+                                        },
+                                        {
+                                            "name":  "SummarizeEx4",
+                                            "question":  "Return a summary of the total number of rows with rainfall"
+                                        },
+                                        {
+                                            "name":  "SummarizeEx5",
+                                            "question":  "Return the number of times each High has occurred per Location both in ascending order from the Weather table"
+                                        }
+                                    ],
+                          "Count":  5
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/projectoperator\u003cbr/\u003e\u003cbr/\u003eThe project-away operator does a similar function as project. Project-away removes the unwanted columns from the full list of columns in the results. This operator should be used when looking to take away columns from a large list as it is more efficient than using project and listing several columns.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003eProject-away Process, AgentID, MachineID, ResourceID\u003cbr/\u003e",
         "tab":  "Overview",
         "section":  "Project",
-        "exercises":  [
-                          "ProjectEx1",
-                          "ProjectEx2"
-                      ]
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "ProjectEx1",
+                                            "question":  "Return High temperatures of all records from the Weather table"
+                                        },
+                                        {
+                                            "name":  "ProjectEx2",
+                                            "question":  "Return High and Low temperatures of all records from the Weather table"
+                                        }
+                                    ],
+                          "Count":  2
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/projectawayoperator\u003cbr/\u003e\u003cbr/\u003eThe project-away operator does a similar function as project. Project-away removes the unwanted columns from the full list of columns in the results. This operator should be used when looking to take away columns from a large list as it is more efficient than using project and listing several columns.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003eProject-away Process, AgentID, MachineID, ResourceID\u003cbr/\u003e",
         "tab":  "Overview",
         "section":  "ProjectAway",
-        "exercises":  [
-                          "ProjectAwayEx1",
-                          "ProjectAwayEx2"
-                      ]
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "ProjectAwayEx1",
+                                            "question":  "Return all records excluding the High column from the Weather table"
+                                        },
+                                        {
+                                            "name":  "ProjectAwayEx2",
+                                            "question":  "Return all records excluding the High and Rain columns from the Weather table"
+                                        }
+                                    ],
+                          "Count":  2
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/datatypes-string-operators\u003cbr/\u003e\u003cbr/\u003eThe contains operator takes a string and filters the logs based on the string. Contains is not case sensitive.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003eOfficeActivity | where OfficeWorkload contains \u0027exchange\u0027\u003cbr/\u003e",
         "tab":  "Overview",
         "section":  "Contains",
-        "exercises":  "ContainsEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "ContainsEx1",
+                                            "question":  "Return records from the Weather table with Location values that have the letter \"s\" in them"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/datatypes-string-operators\u003cbr/\u003e\u003cbr/\u003eThe has operator takes a string and filters the logs based on the string. Has is not case sensitive.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003eSecurityAlert | where AlertProvider has \u0027ASI\u0027\u003cbr/\u003e",
         "tab":  "Overview",
         "section":  "Has",
-        "exercises":  "HasEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "HasEx1",
+                                            "question":  "Return all records from the Mordor table that have the word \"cleared\" in the Message column"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/agofunction\u003cbr/\u003e\u003cbr/\u003eThe ago operator takes the current time and subtracts the specified amount of time from it. The time subtracted can be done in seconds (s), minutes (m), hours (h), and days (d).\u003cbr/\u003e\u003cbr/\u003eago should be used after using equality operators such as \u003e, \u003c, \u003e=, \u003c=.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003ewhere TimeGenerated \u003c ago(1h)\u003cbr/\u003e",
         "tab":  "Scalar",
         "section":  "Ago",
-        "exercises":  [
-                          "AgoEx1",
-                          "AgoEx2"
-                      ]
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "AgoEx1",
+                                            "question":  "Return all Mordor table records from the last 2 days"
+                                        },
+                                        {
+                                            "name":  "AgoEx2",
+                                            "question":  "Return all Mordor table records from more than 6 days ago"
+                                        }
+                                    ],
+                          "Count":  2
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/betweenoperator\u003cbr/\u003e\u003cbr/\u003eThe between operator matches the input that is inside the inclusive range.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003eSecurityAlert | where TimeGenerated between (datetime(05/05/2021 00:00:00) .. datetime(05/07/2021 00:00:00))\u003cbr/\u003e",
         "tab":  "Scalar",
         "section":  "Between",
-        "exercises":  [
-                          "BetweenEx1",
-                          "BetweenEx2"
-                      ]
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "BetweenEx1",
+                                            "question":  "Return rows from the Weather table with a Low between 20 and 22"
+                                        },
+                                        {
+                                            "name":  "BetweenEx2",
+                                            "question":  "Return rows from the Weather table with Rain between 0.8 and 1"
+                                        }
+                                    ],
+                          "Count":  2
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/casefunction\u003cbr/\u003e\u003cbr/\u003eThe case operator evaluates a list of items and returns the first result when the item is satisfied. If none of the items are true, the result of the last item is returned. Case can be seen as a list of if/else statements that runs a check on each item to see if they are true. If not, return the default else value.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003eextend Variable = case( Size \u003c= 3, \"Small\", Size \u003c= 10, \"Medium\", \"Large\")\u003cbr/\u003e",
         "tab":  "Scalar",
         "section":  "Case",
-        "exercises":  "CaseEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "CaseEx1",
+                                            "question":  "Extend a Feeling column that lists \"hot\" for High over 80, \"warm\" for High over 65, and \"cool\" for other Highs"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/scalar-data-types/datetime\u003cbr/\u003e\u003cbr/\u003eThe datetime operator represents an instant in time, typically expressed as a date and time of day. Values range in 00:00:00 (midnight) through 11:59:59 PM.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003e 01:23:45 (1 AM 23 minutes and 45 seconds), between(datetime(01/02/2021 00:00:00) .. datetime(01/04/2021 23:59:59)))\u003cbr/n\u003e",
         "tab":  "Scalar",
         "section":  "Datetime",
-        "exercises":  "DatetimeEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "DatetimeEx1",
+                                            "question":  "Print the time difference between midnight UTC January 22nd 2014 and 3pm UTC on October 1st 2000"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/ifffunction\u003cbr/\u003e\u003cbr/\u003eThe iff operator evaluates the first argument and returns the value of either the second or last argument depending on which item is true. If true, the second option is returned. If false, the third option is returned.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003eHeartbeat | extend day = iff(OSType == \"Windows\", \"It\u0027s Windows!\", \"It\u0027s not Windows!\")\u003cbr/\u003e",
         "tab":  "Scalar",
         "section":  "Iff",
-        "exercises":  "IffEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "IffEx1",
+                                            "question":  "Project the Message column from Mordor extending a default Severity of \"Unknown\" and \"High\" where Message has \"cleared\""
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/parseoperator\u003cbr/\u003e\u003cbr/\u003eThe parse operator evaluates a string expression and parses its value into one or more calculated columns. The columns will have nulls, for unsuccessfully parsed strings. If there is no need to use rows where parsing doesn\u0027t succeed, use the parse-where operator.\u003cbr/\u003e\u003cbr/\u003eSyntax: T | parse [kind=regex [flags=regex_flags] |simple|relaxed] Expression with *\u003cbr/\u003e\u003cbr/\u003eArguments:\u003cbr/\u003e\u003cbr/\u003eT is the input table. kind: simple (the default): StringConstant is a regular string value and the match is strict. All string delimiters should appear in the parsed string, and all extended columns must match the required types.\u003cbr/\u003e\u003cbr/\u003eregex: StringConstant may be a regular expression and the match is strict. All string delimiters, which can be a regex for this mode, should appear in the parsed string, and all extended columns must match the required types.\u003cbr/\u003e\u003cbr/\u003eflags: Flags to be used in regex mode like U (Ungreedy), m (multi-line mode), s (match new line \\n), i (case-insensitive) in RE2 flags.\u003cbr/\u003e\u003cbr/\u003erelaxed: StringConstant is a regular string value and the match is relaxed. All string delimiters should appear in the parsed string, but extended columns may partially match the required types.\u003cbr/\u003e",
         "tab":  "Scalar",
         "section":  "Parse",
-        "exercises":  "ParseEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "ParseEx1",
+                                            "question":  "Return Message values from rows with EventID 1102 in Mordor and parse Message into Subject, ID, AccountName, DomainName, and LogonID"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/sortoperator\u003cbr/\u003e\u003cbr/\u003eThe sort operator sorts the rows of the input table in order by one or more columns.\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003eSecurtiyEvent | where eventID == \u00274624\u0027 | sort by TimeGenerated desc\u003cbr/\u003e",
         "tab":  "Scalar",
         "section":  "Sort",
-        "exercises":  "SortEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "SortEx1",
+                                            "question":  "Sort Weather results by amount of Rain from most to least"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/parsejsonfunction\u003cbr/\u003e\u003cbr/\u003eThe todynamic() operator interprets a string as a JSON value and returns the value as dynamic. Works simililarly as the parse_json operator.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003eextend Variable = parse_json(nestedJsonItem), extend Variable = todynamic(nestedJsonItem)\u003cbr/\u003e",
         "tab":  "Scalar",
         "section":  "ToDynamic",
-        "exercises":  "ToDynamicEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "ToDynamicEx1",
+                                            "question":  "Convert WinEvents from the following table to dynamic and return rows that have an EventID of 1102\u003cbr/\u003edatatable(WinEvents:string) [\u0027{\"EventID\":\"1102\",\"Summary\":\"The audit log was cleared\"}\u0027,\u0027{\"EventID\":\"4739\",\"Summary\":\"Domain policy was changed\"}\u0027]"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/arg-max-aggfunction\u003cbr/\u003e\u003cbr/\u003eThe arg_max operator finds a row in a group that maximizes a specified expresison and returns the value of the expression to return.\u003cbr/\u003eExample: summarize [(NameExprToMaximize , NameExprToReturn [, ...] )=] arg_max (ExprToMaximize, * | ExprToReturn [, ...])\u003cbr/\u003e\u003cbr/\u003eExprToMaximize: Expression that will be used for aggregation calculation. ExprToReturn: Expression that will be used for returning the value when ExprToMaximize is maximum. Expression to return may be a wildcard (*) to return all columns of the input table. NameExprToMaximize: An optional name for the result column representing ExprToMaximize. NameExprToReturn: Additional optional names for the result columns representing ExprToReturn.",
         "tab":  "Advanced",
         "section":  "Arg_max",
-        "exercises":  [
-                          "ArgMaxEx1",
-                          "ArgMaxEx2"
-                      ]
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "ArgMaxEx1",
+                                            "question":  "Return the records from each Location with the most Rain for that Location sorted from most Rain to least"
+                                        },
+                                        {
+                                            "name":  "ArgMaxEx2",
+                                            "question":  "Return the amount of Rain and TimeGenerated from each Location with the most Rain for that Location sorted from most Rain to least"
+                                        }
+                                    ],
+                          "Count":  2
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/arg-min-aggfunction\u003cbr/\u003e\u003cbr/\u003eThe arg_min operator finds a row in a group that maximizes a specified expresison and returns the value of the expression to return.\u003cbr/\u003eExample: summarize [(NameExprToMinimize , NameExprToReturn [, ...] )=] arg_min (ExprToMinimize, * | ExprToReturn [, ...])\u003cbr/\u003e\u003cbr/\u003eExprToMinimize: Expression that will be used for aggregation calculation. ExprToReturn: Expression that will be used for returning the value when ExprToMinimize is minimum. Expression to return may be a wildcard (*) to return all columns of the input table. NameExprToMinimize: An optional name for the result column representing ExprToMinimize. NameExprToReturn: Additional optional names for the result columns representing ExprToReturn.",
         "tab":  "Advanced",
         "section":  "Arg_min",
-        "exercises":  [
-                          "ArgMinEx1",
-                          "ArgMinEx2"
-                      ]
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "ArgMinEx1",
+                                            "question":  "Return the records from each Location with the lowest High temperature for that Location ordered by High from lowest to highest"
+                                        },
+                                        {
+                                            "name":  "ArgMinEx2",
+                                            "question":  "Return the High and Low temperatures from each Location with the lowest High temperature for that Location ordered by High from lowest to highest"
+                                        }
+                                    ],
+                          "Count":  2
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/dcount-aggfunction\u003cbr/\u003e\u003cbr/\u003eThe dcount operator returns an estimate for the number of distinct values that are taken by a scalar expression in a summary group.\u003cbr/\u003eExample: PageViewLog | summarize countries=dcount(country) by continent\u003cbr/\u003e",
         "tab":  "Advanced",
         "section":  "Dcount",
-        "exercises":  "DcountEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "DcountEx1",
+                                            "question":  "Return the number of distinct locations for each High in Weather sorted from most to least counts and highest to lowest temperatures"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/dcountif-aggfunction\u003cbr/\u003e\u003cbr/\u003eThe dcountif operator returns an estimate of the number of distinct values of expression of rows for which the body evaluates to true.\u003cbr/\u003e\u003cbr/\u003eExample: ageViewLog | summarize countries=dcountif(country, country startswith \"United\") by continent\u003cbr/\u003e",
         "tab":  "Advanced",
         "section":  "Dcountif",
-        "exercises":  "DcountifEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "DcountifEx1",
+                                            "question":  "Return the number of distinct locations for each High in Weather if there was Rain that day sorted from most to least counts and highest to lowest temperatures"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/max-aggfunction\u003cbr/\u003e\u003cbr/\u003eThe max operator returns the maximum value across a group.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003esummarize max(Expr)\u003cbr/\u003e",
         "tab":  "Advanced",
         "section":  "Max",
-        "exercises":  "MaxEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "MaxEx1",
+                                            "question":  "Return the hottest High temperature in Weather"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/min-aggfunction\u003cbr/\u003e\u003cbr/\u003eThe min operator returns the minumum value across a group.\u003cbr/\u003e\u003cbr/\u003eExample: summarize min(Expr)\u003cbr/\u003e",
         "tab":  "Advanced",
         "section":  "Min",
-        "exercises":  "MinEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "MinEx1",
+                                            "question":  "Return the coldest Low temperature in Weather"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/mvexpandoperator\u003cbr/\u003e\u003cbr/\u003eThe mv-expand operator expands a dynamic list of items into multiple records. These dynamic lists will appear as nested JSON lists that have not been seperated. The result of this call will separate the items from the lsit into individual rows.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003eIdentityInfo | extend Roles = mvexpand(Permissions)\u003cbr/\u003e",
         "tab":  "Advanced",
         "section":  "Mvexpand",
-        "exercises":  "MvexpandEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "MvexpandEx1",
+                                            "question":  "Transform the following datatable to expand EventID and Summary attributes into separate rows\u003cbr/\u003edatatable(LogType:string,WinEvents:dynamic) [\"Sysmon\",dynamic({\"EventID\":\"1102\",\"Summary\":\"The audit log was cleared\"})]"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/datatableoperator?pivots=azuremonitor\u003cbr/\u003e\u003cbr/\u003eThe datetime operator takes a configuration in as input and returns a table based on the configuration. The configuration consists the name of the column and the format of the data that the column will contain.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003e datatable (Date:datetime, Event:string) [datetime(1910-06-11), \"Born\", datetime(1930-01-01), \"Enters Ecole Navale\", datetime(1953-01-01), \"Published first book\", datetime(1997-06-25), \"Died\"]\u003cbr/\u003e",
         "tab":  "Dataset",
         "section":  "Datatable",
-        "exercises":  "DatatableEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "DatatableEx1",
+                                            "question":  "Create a custom datatable of cities with Location of Boston, Chicago, and Portland"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/letstatement\u003cbr/\u003e\u003cbr/\u003eThe let operator binds names to expressions. Let allows for users to establish variables with static values or even take on the results of a query. Let is defined before the main body of the query.\u003cbr/\u003e\u003cbr/\u003eExample: let start_time = ago(5h); let end_time = start_time + 2h; T | where Time \u003e start_time and Time \u003c end_time\u003cbr/\u003e\u003cbr/\u003elet IPAddresses = SigninLogs | summarize by IPAddress; SecurityAlert | where todynamic(Entities) in IPAddresses\u003cbr/\u003e",
         "tab":  "Dataset",
         "section":  "Let",
-        "exercises":  "LetEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "LetEx1",
+                                            "question":  "Find the the largest ProcessId in Mordor and store it in a variable as a scalar. Then use that variable to filter the full Mordor dataset to only return rows with that ProcessId."
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/extendoperator\u003cbr/\u003e\u003cbr/\u003eThe Extend operator creates a variable and column within the body of the query. The variable created can take on the value of another column or take on a static value. Extend is also used for iff, case, and other operators.\u003cbr/\u003e\u003cbr/\u003eExample: extend duration = endTime - startTime\u003cbr/\u003e",
         "tab":  "Dataset",
         "section":  "Extend",
-        "exercises":  "ExtendEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "ExtendEx1",
+                                            "question":  "Add a Range column to Weather that contains the difference between High and Low temperatures"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/unionoperator?pivots=azuremonitor\u003cbr/\u003e\u003cbr/\u003eThe union operator takes two or more tables and returns the rows of them all in a stacked fashion.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003eTable1 | union Table2, Table3\u003cbr/\u003e",
         "tab":  "Dataset",
         "section":  "Union",
-        "exercises":  "UnionEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "UnionEx1",
+                                            "question":  "Combine these two cities datatables into a single datatable using the union statement\u003cbr/\u003elet cities1 = datatable(Location:string)[\"Boston\",\"Eugene\",\"Houston\"];\u003cbr/\u003elet cities2 = datatable(Location:string)[\"Boise\",\"Chicago\",\"Tampa\"];"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/joinoperator?pivots=azuremonitor\u003cbr/\u003e\u003cbr/\u003eThe join operator mergres the rows of two tables to form a new table by matching the specified values.\u003cbr/\u003e\u003cbr/\u003eExample: Table1 | join (Table2) on CommonColumn, $left.Col1 == $right.Col2\u003cbr/\u003e\u003cbr/\u003eThere are several types of joins:\u003cbr/\u003e\u003cbr/\u003ekind=leftanti, kind=leftsemi The result table contains columns from the left side only.\u003cbr/\u003e\u003cbr/\u003ekind=rightanti, kind=rightsemi The result table contains columns from the right side only.\u003cbr/\u003e\u003cbr/\u003ekind=innerunique, kind=inner, kind=leftouter, kind=rightouter, kind=fullouter A column for every column in each of the two tables, including the matching keys. The columns of the right side will be automatically renamed if there are name clashes.\u003cbr/\u003e",
         "tab":  "Dataset",
         "section":  "Join",
-        "exercises":  "JoinEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "JoinEx1",
+                                            "question":  "Add state data to the Weather table with a left inner join using the following states datatable\u003cbr/\u003elet states = datatable(Location:string,State:string)[\"Houston\",\"TX\",\"Philadelphia\",\"PA\",\"Indianapolis\",\"IN\",\"New York City\",\"NY\",\"Seattle\",\"WA\"];"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     },
     {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/externaldata-operator?pivots=azuremonitor\u003cbr/\u003e\u003cbr/\u003eThe externaldata operator allows for queries to refernce data that is stored outside of the workspace. The most common use case for this operator is to call on data that is being stored within an Azure Storage Account blob. API endpoints can also be called from within the query.\u003cbr/\u003e\u003cbr/\u003eExternaldata requires that a user tells the query the structure of the data that will be brought in as well as the column names. That would appear as so: (Firstcolumn: int, Secondcolumn: string, Thirdcolumn: real). When pulling data from a blob, a SAS token will need to be generated in order for the query to access the data.\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003elet ExternalTable = externaldata(Device: string, Version: real, User: string) [@\u0027STORAGE BLOB SAS TOKEN\"] with (format=json)\u003cbr/\u003e",
         "tab":  "External",
         "section":  "ExternalData",
-        "exercises":  "ExternalDataEx1"
+        "exercises":  {
+                          "value":  [
+                                        {
+                                            "name":  "ExternalDataEx1",
+                                            "question":  "Return a new datatable based on the following TIC 3.0 mapping CSV\u003cbr/\u003ehttps://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Sample%20Data/Feeds/ZeroTrustTIC3Mapping.csv"
+                                        }
+                                    ],
+                          "Count":  1
+                      }
     }
 ]
