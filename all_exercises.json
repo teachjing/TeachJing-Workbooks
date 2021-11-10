@@ -7,15 +7,18 @@
                           "value":  [
                                         {
                                             "name":  "TakeEx1",
-                                            "question":  "Return 1 row from the Weather table in the default order"
+                                            "question":  "Return 1 row from the Weather table in the default order",
+                                            "dataset":  "Weather"
                                         },
                                         {
                                             "name":  "TakeEx2",
-                                            "question":  "Return 6 rows from the Weather table in the default order"
+                                            "question":  "Return 6 rows from the Weather table in the default order",
+                                            "dataset":  "Weather"
                                         },
                                         {
                                             "name":  "TakeEx3",
-                                            "question":  "Return 10 rows from the Weather table in the default order"
+                                            "question":  "Return 10 rows from the Weather table in the default order",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  3
@@ -29,11 +32,13 @@
                           "value":  [
                                         {
                                             "name":  "WhereEx1",
-                                            "question":  "Return the newest row from Philadelphia in the Weather table"
+                                            "question":  "Return the newest row from Philadelphia in the Weather table",
+                                            "dataset":  "Weather"
                                         },
                                         {
                                             "name":  "WhereEx2",
-                                            "question":  "Return the oldest row from Seattle in the Weather table"
+                                            "question":  "Return the oldest row from Seattle in the Weather table",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  2
@@ -47,23 +52,28 @@
                           "value":  [
                                         {
                                             "name":  "SummarizeEx1",
-                                            "question":  "Return the number of distinct High temperatures found in the Weather table"
+                                            "question":  "Return the number of distinct High temperatures found in the Weather table",
+                                            "dataset":  "Weather"
                                         },
                                         {
                                             "name":  "SummarizeEx2",
-                                            "question":  "Return the number of rows with rainfall in the Weather table and the total rainfall accumulation"
+                                            "question":  "Return the number of rows with rainfall in the Weather table and the total rainfall accumulation",
+                                            "dataset":  "Weather"
                                         },
                                         {
                                             "name":  "SummarizeEx3",
-                                            "question":  "Return a summary of Locations from the Weather table in descending order of Location"
+                                            "question":  "Return a summary of Locations from the Weather table in descending order of Location",
+                                            "dataset":  "Weather"
                                         },
                                         {
                                             "name":  "SummarizeEx4",
-                                            "question":  "Return a summary of the total number of rows with rainfall"
+                                            "question":  "Return a summary of the total number of rows with rainfall",
+                                            "dataset":  ""
                                         },
                                         {
                                             "name":  "SummarizeEx5",
-                                            "question":  "Return the number of times each High has occurred per Location both in ascending order from the Weather table"
+                                            "question":  "Return the number of times each High has occurred per Location both in ascending order from the Weather table",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  5
@@ -77,11 +87,13 @@
                           "value":  [
                                         {
                                             "name":  "ProjectEx1",
-                                            "question":  "Return High temperatures of all records from the Weather table"
+                                            "question":  "Return High temperatures of all records from the Weather table",
+                                            "dataset":  "Weather"
                                         },
                                         {
                                             "name":  "ProjectEx2",
-                                            "question":  "Return High and Low temperatures of all records from the Weather table"
+                                            "question":  "Return High and Low temperatures of all records from the Weather table",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  2
@@ -95,11 +107,13 @@
                           "value":  [
                                         {
                                             "name":  "ProjectAwayEx1",
-                                            "question":  "Return all records excluding the High column from the Weather table"
+                                            "question":  "Return all records excluding the High column from the Weather table",
+                                            "dataset":  "Weather"
                                         },
                                         {
                                             "name":  "ProjectAwayEx2",
-                                            "question":  "Return all records excluding the High and Rain columns from the Weather table"
+                                            "question":  "Return all records excluding the High and Rain columns from the Weather table",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  2
@@ -113,7 +127,8 @@
                           "value":  [
                                         {
                                             "name":  "ContainsEx1",
-                                            "question":  "Return records from the Weather table with Location values that have the letter \"s\" in them"
+                                            "question":  "Return records from the Weather table with Location values that have the letter \"s\" in them",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  1
@@ -127,7 +142,8 @@
                           "value":  [
                                         {
                                             "name":  "HasEx1",
-                                            "question":  "Return all records from the Mordor table that have the word \"cleared\" in the Message column"
+                                            "question":  "Return all records from the Mordor table that have the word \"cleared\" in the Message column",
+                                            "dataset":  "Mordor"
                                         }
                                     ],
                           "Count":  1
@@ -141,11 +157,13 @@
                           "value":  [
                                         {
                                             "name":  "AgoEx1",
-                                            "question":  "Return all Mordor table records from the last 2 days"
+                                            "question":  "Return all Mordor table records from the last 2 days",
+                                            "dataset":  "Mordor"
                                         },
                                         {
                                             "name":  "AgoEx2",
-                                            "question":  "Return all Mordor table records from more than 6 days ago"
+                                            "question":  "Return all Mordor table records from more than 6 days ago",
+                                            "dataset":  "Mordor"
                                         }
                                     ],
                           "Count":  2
@@ -159,11 +177,13 @@
                           "value":  [
                                         {
                                             "name":  "BetweenEx1",
-                                            "question":  "Return rows from the Weather table with a Low between 20 and 22"
+                                            "question":  "Return rows from the Weather table with a Low between 20 and 22",
+                                            "dataset":  "Weather"
                                         },
                                         {
                                             "name":  "BetweenEx2",
-                                            "question":  "Return rows from the Weather table with Rain between 0.8 and 1"
+                                            "question":  "Return rows from the Weather table with Rain between 0.8 and 1",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  2
@@ -177,7 +197,8 @@
                           "value":  [
                                         {
                                             "name":  "CaseEx1",
-                                            "question":  "Extend a Feeling column that lists \"hot\" for High over 80, \"warm\" for High over 65, and \"cool\" for other Highs"
+                                            "question":  "Extend a Feeling column that lists \"hot\" for High over 80, \"warm\" for High over 65, and \"cool\" for other Highs",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  1
@@ -191,7 +212,8 @@
                           "value":  [
                                         {
                                             "name":  "DatetimeEx1",
-                                            "question":  "Print the time difference between midnight UTC January 22nd 2014 and 3pm UTC on October 1st 2000"
+                                            "question":  "Print the time difference between midnight UTC January 22nd 2014 and 3pm UTC on October 1st 2000",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  1
@@ -205,7 +227,8 @@
                           "value":  [
                                         {
                                             "name":  "IffEx1",
-                                            "question":  "Project the Message column from Mordor extending a default Severity of \"Unknown\" and \"High\" where Message has \"cleared\""
+                                            "question":  "Project the Message column from Mordor extending a default Severity of \"Unknown\" and \"High\" where Message has \"cleared\"",
+                                            "dataset":  "Mordor"
                                         }
                                     ],
                           "Count":  1
@@ -219,7 +242,8 @@
                           "value":  [
                                         {
                                             "name":  "ParseEx1",
-                                            "question":  "Return Message values from rows with EventID 1102 in Mordor and parse Message into Subject, ID, AccountName, DomainName, and LogonID"
+                                            "question":  "Return Message values from rows with EventID 1102 in Mordor and parse Message into Subject, ID, AccountName, DomainName, and LogonID",
+                                            "dataset":  "Mordor"
                                         }
                                     ],
                           "Count":  1
@@ -233,7 +257,8 @@
                           "value":  [
                                         {
                                             "name":  "SortEx1",
-                                            "question":  "Sort Weather results by amount of Rain from most to least"
+                                            "question":  "Sort Weather results by amount of Rain from most to least",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  1
@@ -247,7 +272,8 @@
                           "value":  [
                                         {
                                             "name":  "ToDynamicEx1",
-                                            "question":  "Convert WinEvents from the following table to dynamic and return rows that have an EventID of 1102\u003cbr/\u003edatatable(WinEvents:string) [\u0027{\"EventID\":\"1102\",\"Summary\":\"The audit log was cleared\"}\u0027,\u0027{\"EventID\":\"4739\",\"Summary\":\"Domain policy was changed\"}\u0027]"
+                                            "question":  "Convert WinEvents from the following table to dynamic and return rows that have an EventID of 1102\u003cbr/\u003edatatable(WinEvents:string) [\u0027{\"EventID\":\"1102\",\"Summary\":\"The audit log was cleared\"}\u0027,\u0027{\"EventID\":\"4739\",\"Summary\":\"Domain policy was changed\"}\u0027]",
+                                            "dataset":  ""
                                         }
                                     ],
                           "Count":  1
@@ -261,11 +287,13 @@
                           "value":  [
                                         {
                                             "name":  "ArgMaxEx1",
-                                            "question":  "Return the records from each Location with the most Rain for that Location sorted from most Rain to least"
+                                            "question":  "Return the records from each Location with the most Rain for that Location sorted from most Rain to least",
+                                            "dataset":  "Weather"
                                         },
                                         {
                                             "name":  "ArgMaxEx2",
-                                            "question":  "Return the amount of Rain and TimeGenerated from each Location with the most Rain for that Location sorted from most Rain to least"
+                                            "question":  "Return the amount of Rain and TimeGenerated from each Location with the most Rain for that Location sorted from most Rain to least",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  2
@@ -279,11 +307,13 @@
                           "value":  [
                                         {
                                             "name":  "ArgMinEx1",
-                                            "question":  "Return the records from each Location with the lowest High temperature for that Location ordered by High from lowest to highest"
+                                            "question":  "Return the records from each Location with the lowest High temperature for that Location ordered by High from lowest to highest",
+                                            "dataset":  "Weather"
                                         },
                                         {
                                             "name":  "ArgMinEx2",
-                                            "question":  "Return the High and Low temperatures from each Location with the lowest High temperature for that Location ordered by High from lowest to highest"
+                                            "question":  "Return the High and Low temperatures from each Location with the lowest High temperature for that Location ordered by High from lowest to highest",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  2
@@ -297,7 +327,8 @@
                           "value":  [
                                         {
                                             "name":  "DcountEx1",
-                                            "question":  "Return the number of distinct locations for each High in Weather sorted from most to least counts and highest to lowest temperatures"
+                                            "question":  "Return the number of distinct locations for each High in Weather sorted from most to least counts and highest to lowest temperatures",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  1
@@ -311,7 +342,8 @@
                           "value":  [
                                         {
                                             "name":  "DcountifEx1",
-                                            "question":  "Return the number of distinct locations for each High in Weather if there was Rain that day sorted from most to least counts and highest to lowest temperatures"
+                                            "question":  "Return the number of distinct locations for each High in Weather if there was Rain that day sorted from most to least counts and highest to lowest temperatures",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  1
@@ -325,7 +357,8 @@
                           "value":  [
                                         {
                                             "name":  "MaxEx1",
-                                            "question":  "Return the hottest High temperature in Weather"
+                                            "question":  "Return the hottest High temperature in Weather",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  1
@@ -339,7 +372,8 @@
                           "value":  [
                                         {
                                             "name":  "MinEx1",
-                                            "question":  "Return the coldest Low temperature in Weather"
+                                            "question":  "Return the coldest Low temperature in Weather",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  1
@@ -353,7 +387,8 @@
                           "value":  [
                                         {
                                             "name":  "MvexpandEx1",
-                                            "question":  "Transform the following datatable to expand EventID and Summary attributes into separate rows\u003cbr/\u003edatatable(LogType:string,WinEvents:dynamic) [\"Sysmon\",dynamic({\"EventID\":\"1102\",\"Summary\":\"The audit log was cleared\"})]"
+                                            "question":  "Transform the following datatable to expand EventID and Summary attributes into separate rows\u003cbr/\u003edatatable(LogType:string,WinEvents:dynamic) [\"Sysmon\",dynamic({\"EventID\":\"1102\",\"Summary\":\"The audit log was cleared\"})]",
+                                            "dataset":  ""
                                         }
                                     ],
                           "Count":  1
@@ -367,7 +402,8 @@
                           "value":  [
                                         {
                                             "name":  "DatatableEx1",
-                                            "question":  "Create a custom datatable of cities with Location of Boston, Chicago, and Portland"
+                                            "question":  "Create a custom datatable of cities with Location of Boston, Chicago, and Portland",
+                                            "dataset":  ""
                                         }
                                     ],
                           "Count":  1
@@ -381,7 +417,8 @@
                           "value":  [
                                         {
                                             "name":  "LetEx1",
-                                            "question":  "Find the the largest ProcessId in Mordor and store it in a variable as a scalar. Then use that variable to filter the full Mordor dataset to only return rows with that ProcessId."
+                                            "question":  "Find the the largest ProcessId in Mordor and store it in a variable as a scalar. Then use that variable to filter the full Mordor dataset to only return rows with that ProcessId.",
+                                            "dataset":  "Mordor"
                                         }
                                     ],
                           "Count":  1
@@ -395,7 +432,8 @@
                           "value":  [
                                         {
                                             "name":  "ExtendEx1",
-                                            "question":  "Add a Range column to Weather that contains the difference between High and Low temperatures"
+                                            "question":  "Add a Range column to Weather that contains the difference between High and Low temperatures",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  1
@@ -409,7 +447,8 @@
                           "value":  [
                                         {
                                             "name":  "UnionEx1",
-                                            "question":  "Combine these two cities datatables into a single datatable using the union statement\u003cbr/\u003elet cities1 = datatable(Location:string)[\"Boston\",\"Eugene\",\"Houston\"];\u003cbr/\u003elet cities2 = datatable(Location:string)[\"Boise\",\"Chicago\",\"Tampa\"];"
+                                            "question":  "Combine these two cities datatables into a single datatable using the union statement\u003cbr/\u003elet cities1 = datatable(Location:string)[\"Boston\",\"Eugene\",\"Houston\"];\u003cbr/\u003elet cities2 = datatable(Location:string)[\"Boise\",\"Chicago\",\"Tampa\"];",
+                                            "dataset":  ""
                                         }
                                     ],
                           "Count":  1
@@ -423,7 +462,8 @@
                           "value":  [
                                         {
                                             "name":  "JoinEx1",
-                                            "question":  "Add state data to the Weather table with a left inner join using the following states datatable\u003cbr/\u003elet states = datatable(Location:string,State:string)[\"Houston\",\"TX\",\"Philadelphia\",\"PA\",\"Indianapolis\",\"IN\",\"New York City\",\"NY\",\"Seattle\",\"WA\"];"
+                                            "question":  "Add state data to the Weather table with a left inner join using the following states datatable\u003cbr/\u003elet states = datatable(Location:string,State:string)[\"Houston\",\"TX\",\"Philadelphia\",\"PA\",\"Indianapolis\",\"IN\",\"New York City\",\"NY\",\"Seattle\",\"WA\"];",
+                                            "dataset":  "Weather"
                                         }
                                     ],
                           "Count":  1
@@ -437,7 +477,8 @@
                           "value":  [
                                         {
                                             "name":  "ExternalDataEx1",
-                                            "question":  "Return a new datatable based on the following TIC 3.0 mapping CSV\u003cbr/\u003ehttps://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Sample%20Data/Feeds/ZeroTrustTIC3Mapping.csv"
+                                            "question":  "Return a new datatable based on the following TIC 3.0 mapping CSV\u003cbr/\u003ehttps://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Sample%20Data/Feeds/ZeroTrustTIC3Mapping.csv",
+                                            "dataset":  ""
                                         }
                                     ],
                           "Count":  1
