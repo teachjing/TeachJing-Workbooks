@@ -37,7 +37,7 @@
                                             "name":  "WhereEx1",
                                             "question":  "Return all rows where the 'location' is houston",
                                             "dataset":  "Weather",
-                                            "answer" : "fCB3aGVyZSBMb2NhdGlvbiA9PSAnSG91c3Rvbic="
+                                            "answer" : "V2VhdGhlciB8IHdoZXJlIGxvY2F0aW9uID09ICJIb3VzdG9uIg=="
                                         },   
                                         {
                                             "name":  "WhereEx2",
