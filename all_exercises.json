@@ -77,7 +77,7 @@
                                             "name":  "SummarizeEx2",
                                             "question":  "Return the number of times that New York was over 85 degrees",
                                             "dataset" : "Weather",
-                                            "answer":  "V2VhdGhlcgp8IHdoZXJlIExvY2F0aW9uID09ICdOZXcgWW9yaycKfCB3aGVyZSBIaWdoID4gODUKfCBzdW1tYXJpemUgY291bnQoKQ=="
+                                            "answer":  "V2VhdGhlciB8IHdoZXJlIExvY2F0aW9uID09ICdOZXcgWW9yayBDaXR5JyB8IHdoZXJlIEhpZ2ggPiA4NSB8IHN1bW1hcml6ZSBjb3VudCgp"
                                         },                                        
                                         {
                                             "name":  "SummarizeEx3",
