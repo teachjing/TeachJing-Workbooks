@@ -36,7 +36,8 @@
                                         {
                                             "name":  "WhereEx1",
                                             "question":  "Return the newest row from Philadelphia in the Weather table",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlciB8IGxpbWl0IDY="
                                         },
                                         {
                                             "name":  "WhereEx2",
