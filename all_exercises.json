@@ -75,28 +75,34 @@
                                         },
                                         {
                                             "name":  "SummarizeEx2",
+                                            "question":  "Return the number of times that New York was over 85 degrees",
+                                            "dataset" : "Weather",
+                                            "answer":  "V2VhdGhlcgp8IHdoZXJlIExvY2F0aW9uID09ICdOZXcgWW9yaycKfCB3aGVyZSBIaWdoID4gODUKfCBzdW1tYXJpemUgY291bnQoKQ=="
+                                        },                                        
+                                        {
+                                            "name":  "SummarizeEx3",
                                             "question":  "Return the number of distinct High temperatures found in the Weather table",
                                             "dataset" : "Weather",
                                             "answer":  "V2VhdGhlcgp8IHN1bW1hcml6ZSBkY291bnQoSGlnaCk="
                                         },
                                         {
-                                            "name":  "SummarizeEx3",
+                                            "name":  "SummarizeEx4",
                                             "question":  "Return the number of rows with rainfall in the Weather table and the total rainfall accumulation",
                                             "dataset":  "Weather",
                                             "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBkY291bnQoUmFpbiksIHN1bShSYWluKQ=="
                                         },
                                         {
-                                            "name":  "SummarizeEx4",
+                                            "name":  "SummarizeEx5",
                                             "question":  "Return a summary of Locations from the Weather table in descending order of Location",
                                             "dataset":  "Weather"
                                         },
                                         {
-                                            "name":  "SummarizeEx5",
+                                            "name":  "SummarizeEx6",
                                             "question":  "Return a summary of the total number of rows with rainfall",
                                             "dataset":  ""
                                         },
                                         {
-                                            "name":  "SummarizeEx6",
+                                            "name":  "SummarizeEx7",
                                             "question":  "Return the number of times each High has occurred per Location both in ascending order from the Weather table",
                                             "dataset":  "Weather"
                                         }
