@@ -69,7 +69,7 @@
                           "value":  [
                                         {
                                             "name":  "SummarizeEx1",
-                                            "question":  "Return the count of each temperature (Low,High) has shown up for `Seattle`",
+                                            "question":  "Return the count of each temperature has shown up for Seattle",
                                             "dataset" : "Weather",
                                             "answer":  "V2VhdGhlcgp8IHdoZXJlIExvY2F0aW9uID09ICdTZWF0dGxlJwp8IHN1bW1hcml6ZSBjb3VudCgpIGJ5IExvdywgSGlnaA"
                                         },
