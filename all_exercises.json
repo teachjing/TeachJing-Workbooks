@@ -15,7 +15,7 @@
                                             "name":  "TakeEx2",
                                             "question":  "Return 6 rows from the Weather table in the default order",
                                             "dataset":  "Weather",
-                                            "answer" : "V2VhdGhlciB8IGxpbWl0IDY="
+                                            "answer" : "V2VhdGhlciB8IHRha2UgNg=="
                                         },
                                         {
                                             "name":  "TakeEx3",
