@@ -58,7 +58,7 @@
                                         {
                                             "name":  "SummarizeEx1",
                                             "question":  "Return the number of distinct High temperatures found in the Weather table",
-                                            "dataset":  "Weather"
+                                            "dataset":  "V2VhdGhlcgp8IHN1bW1hcml6ZSBkY291bnQoSGlnaCk="
                                         },
                                         {
                                             "name":  "SummarizeEx2",
