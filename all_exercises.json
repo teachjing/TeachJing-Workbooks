@@ -37,12 +37,13 @@
                                             "name":  "WhereEx1",
                                             "question":  "Return the newest row from Philadelphia in the Weather table",
                                             "dataset":  "Weather",
-                                            "answer" : "V2VhdGhlciB8IGxpbWl0IDY="
+                                            "answer" : "V2VhdGhlcgp8IHdoZXJlIExvY2F0aW9uID09ICJQaGlsYWRlbHBoaWEiCnwgdGFrZSAx"
                                         },
                                         {
                                             "name":  "WhereEx2",
                                             "question":  "Return the oldest row from Seattle in the Weather table",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHdoZXJlIExvY2F0aW9uID09ICJTZWF0dGxlIgp8IHNvcnQgYnkgVGltZUdlbmVyYXRlZCBhc2MKfCB0YWtlIDE="
                                         }
                                     ],
                           "Count":  2
