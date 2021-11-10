@@ -9,7 +9,7 @@
                                             "name":  "TakeEx1",
                                             "question":  "Return 1 row from the Weather table in the default order",
                                             "dataset":  "Weather",
-                                            "answer" "V2VhdGhlciB8IGxpbWl0IDE="
+                                            "answer" : "V2VhdGhlciB8IGxpbWl0IDE="
                                         },
                                         {
                                             "name":  "TakeEx2",
