@@ -147,12 +147,14 @@
                                         {
                                             "name":  "ProjectAwayEx1",
                                             "question":  "Return all records excluding the High column from the Weather table",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHByb2plY3QtYXdheSBIaWdo"
                                         },
                                         {
                                             "name":  "ProjectAwayEx2",
                                             "question":  "Return all records excluding the High and Rain columns from the Weather table",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHByb2plY3QtYXdheSBIaWdoLCBSYWlu"
                                         }                                    
                                     ],
                           "Count":  2
