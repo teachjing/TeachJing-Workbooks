@@ -42,7 +42,7 @@
                                         {
                                             "name":  "WhereEx2",
                                             "question":  "From the Weather table, return all lows and highs above 71",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
                                             "answer" : "V2VhdGhlciB8wqB3aGVyZcKgTG93wqA+wqA3McKgYW5kwqBIaWdowqA+wqA3MQ=="
                                         },										
                                         {
