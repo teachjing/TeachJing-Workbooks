@@ -20,7 +20,8 @@
                                         {
                                             "name":  "TakeEx3",
                                             "question":  "Return 10 rows from the Weather table in the default order",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlciB8IHRha2UgMTA="
                                         }
                                     ],
                           "Count":  3
