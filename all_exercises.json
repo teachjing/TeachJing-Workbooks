@@ -37,22 +37,28 @@
                                             "name":  "WhereEx1",
                                             "question":  "Return all rows where the 'location' is houston",
                                             "dataset":  "Weather",
-                                            "answer" : "V2VhdGhlcgp8IHdoZXJlIExvY2F0aW9uID09ICdIb3VzdG9uJw=="
-                                        },                            
+                                            "answer" : "fCB3aGVyZSBMb2NhdGlvbiA9PSAnSG91c3Rvbic="
+                                        },   
                                         {
                                             "name":  "WhereEx2",
+                                            "question":  "From the Weather table, return all lows and highs above 71",
+                                            "dataset":  "Weather"
+                                            "answer" : "V2VhdGhlciB8wqB3aGVyZcKgTG93wqA+wqA3McKgYW5kwqBIaWdowqA+wqA3MQ=="
+                                        },										
+                                        {
+                                            "name":  "WhereEx3",
                                             "question":  "Return the newest row from Philadelphia in the Weather table",
                                             "dataset":  "Weather",
                                             "answer" : "V2VhdGhlcgp8IHdoZXJlIExvY2F0aW9uID09ICJQaGlsYWRlbHBoaWEiCnwgdGFrZSAx"
                                         },
                                         {
-                                            "name":  "WhereEx3",
+                                            "name":  "WhereEx4",
                                             "question":  "Return the oldest row from Seattle in the Weather table",
                                             "dataset":  "Weather",
                                             "answer" : "V2VhdGhlcgp8IHdoZXJlIExvY2F0aW9uID09ICJTZWF0dGxlIgp8IHNvcnQgYnkgVGltZUdlbmVyYXRlZCBhc2MKfCB0YWtlIDE="
                                         }
                                     ],
-                          "Count":  3
+                          "Count":  2
                       }
     },
     {
