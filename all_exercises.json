@@ -35,12 +35,18 @@
                           "value":  [
                                         {
                                             "name":  "WhereEx1",
+                                            "question":  "Return all rows where the 'location' is houston",
+                                            "dataset":  "Weather",
+                                            "answer" : "fCB3aGVyZSBMb2NhdGlvbiA9PSAnSG91c3Rvbic="
+                                        },                            
+                                        {
+                                            "name":  "WhereEx2",
                                             "question":  "Return the newest row from Philadelphia in the Weather table",
                                             "dataset":  "Weather",
                                             "answer" : "V2VhdGhlcgp8IHdoZXJlIExvY2F0aW9uID09ICJQaGlsYWRlbHBoaWEiCnwgdGFrZSAx"
                                         },
                                         {
-                                            "name":  "WhereEx2",
+                                            "name":  "WhereEx3",
                                             "question":  "Return the oldest row from Seattle in the Weather table",
                                             "dataset":  "Weather",
                                             "answer" : "V2VhdGhlcgp8IHdoZXJlIExvY2F0aW9uID09ICJTZWF0dGxlIgp8IHNvcnQgYnkgVGltZUdlbmVyYXRlZCBhc2MKfCB0YWtlIDE="
