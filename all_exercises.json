@@ -71,8 +71,8 @@
                                             "name":  "SummarizeEx1",
                                             "question":  "Return the count of each temperature has shown up for Seattle",
                                             "dataset" : "Weather",
-                                            "answer":  "V2VhdGhlcgp8IHdoZXJlIExvY2F0aW9uID09ICdTZWF0dGxlJwp8IHN1bW1hcml6ZSBjb3VudCgpIGJ5IExvdywgSGlnaA"
-                                        },
+                                            "answer":  "V2VhdGhlcgp8IHdoZXJlIExvY2F0aW9uID09ICdTZWF0dGxlJwp8IHN1bW1hcml6ZSBjb3VudCgpIGJ5IExvdywgSGlnaA=="
+                                        },    
                                         {
                                             "name":  "SummarizeEx2",
                                             "question":  "Return the number of times that New York was over 85 degrees",
@@ -99,12 +99,8 @@
                                         {
                                             "name":  "SummarizeEx6",
                                             "question":  "Return a summary of the total number of rows with rainfall",
-                                            "dataset":  ""
-                                        },
-                                        {
-                                            "name":  "SummarizeEx7",
-                                            "question":  "Return the number of times each High has occurred per Location both in ascending order from the Weather table",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBjb3VudGlmKFJhaW4gPD4gMCk="
                                         }
                                     ],
                           "Count":  5
