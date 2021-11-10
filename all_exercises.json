@@ -64,7 +64,8 @@
                                         {
                                             "name":  "SummarizeEx2",
                                             "question":  "Return the number of rows with rainfall in the Weather table and the total rainfall accumulation",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBkY291bnQoUmFpbiksIHN1bShSYWluKQ=="
                                         },
                                         {
                                             "name":  "SummarizeEx3",
