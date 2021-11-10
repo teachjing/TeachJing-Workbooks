@@ -119,12 +119,14 @@
                                         {
                                             "name":  "ProjectEx1",
                                             "question":  "Return High temperatures of all records from the Weather table",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHByb2plY3QgSGlnaA=="
                                         },
                                         {
                                             "name":  "ProjectEx2",
                                             "question":  "Return High and Low temperatures of all records from the Weather table",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHByb2plY3QgSGlnaCwgTG93"
                                         }
                                     ],
                           "Count":  2
