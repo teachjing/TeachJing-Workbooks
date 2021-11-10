@@ -81,7 +81,7 @@
                                         },                                        
                                         {
                                             "name":  "SummarizeEx3",
-                                            "question":  "Return the number of distinct High temperatures found in the Weather table",
+                                            "question":  "Return the number of distinct High temperatures found in the Weather table <br><br> You will need to use `dcount()`. ```T | summarize dcount(V) by G | count```",
                                             "dataset" : "Weather",
                                             "answer":  "V2VhdGhlcgp8IHN1bW1hcml6ZSBkY291bnQoSGlnaCk="
                                         },
