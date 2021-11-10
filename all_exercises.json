@@ -127,7 +127,13 @@
                                             "question":  "Return High and Low temperatures of all records from the Weather table",
                                             "dataset":  "Weather",
                                             "answer" : "V2VhdGhlcgp8IHByb2plY3QgSGlnaCwgTG93"
-                                        }
+                                        },
+                                        {
+                                            "name":  "ProjectEx3",
+                                            "question":  "Rename the Low column to LowestTemperature and return the results",
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHByb2plY3QgTG93ZXN0VGVtcGVyYXR1cmUgPSBMb3c="
+                                        }   
                                     ],
                           "Count":  2
                       }
@@ -147,7 +153,7 @@
                                             "name":  "ProjectAwayEx2",
                                             "question":  "Return all records excluding the High and Rain columns from the Weather table",
                                             "dataset":  "Weather"
-                                        }
+                                        }                                    
                                     ],
                           "Count":  2
                       }
