@@ -333,13 +333,13 @@
         "exercises":  {
                           "value":  [
                                         {
-                                            "name":  "ArgMaxEx1",
+                                            "name":  "Arg_maxEx1",
                                             "question":  "Return the records from each Location with the most Rain for that Location sorted from most Rain to least",
                                             "dataset":  "Weather",
                                             "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBhcmdfbWF4KFJhaW4sICopIGJ5IExvY2F0aW9uCnwgc29ydCBieSBSYWluIGRlc2M="
                                         },
                                         {
-                                            "name":  "ArgMaxEx2",
+                                            "name":  "Arg_maxEx2",
                                             "question":  "Return the amount of Rain and TimeGenerated from each Location with the most Rain for that Location sorted from most Rain to least",
                                             "dataset":  "Weather",
                                             "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBhcmdfbWF4KFJhaW4sIFJhaW4sIFRpbWVHZW5lcmF0ZWQpIGJ5IExvY2F0aW9uCnwgc29ydCBieSBSYWluIGRlc2M="
