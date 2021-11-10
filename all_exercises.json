@@ -335,12 +335,14 @@
                                         {
                                             "name":  "ArgMaxEx1",
                                             "question":  "Return the records from each Location with the most Rain for that Location sorted from most Rain to least",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBhcmdfbWF4KFJhaW4sICopIGJ5IExvY2F0aW9uCnwgc29ydCBieSBSYWluIGRlc2M="
                                         },
                                         {
                                             "name":  "ArgMaxEx2",
                                             "question":  "Return the amount of Rain and TimeGenerated from each Location with the most Rain for that Location sorted from most Rain to least",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBhcmdfbWF4KFJhaW4sIFJhaW4sIFRpbWVHZW5lcmF0ZWQpIGJ5IExvY2F0aW9uCnwgc29ydCBieSBSYWluIGRlc2M="
                                         }
                                     ],
                           "Count":  2
@@ -355,12 +357,14 @@
                                         {
                                             "name":  "ArgMinEx1",
                                             "question":  "Return the records from each Location with the lowest High temperature for that Location ordered by High from lowest to highest",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBhcmdfbWluKEhpZ2gsICopIGJ5IExvY2F0aW9uCnwgc29ydCBieSBIaWdoIGFzYw=="
                                         },
                                         {
                                             "name":  "ArgMinEx2",
                                             "question":  "Return the High and Low temperatures from each Location with the lowest High temperature for that Location ordered by High from lowest to highest",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBhcmdfbWluKEhpZ2gsIExvdykgYnkgTG9jYXRpb24KfCBzb3J0IGJ5IEhpZ2ggYXNj"
                                         }
                                     ],
                           "Count":  2
