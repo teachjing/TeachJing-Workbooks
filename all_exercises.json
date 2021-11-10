@@ -165,7 +165,8 @@
                                         {
                                             "name":  "ContainsEx1",
                                             "question":  "Return records from the Weather table with Location values that have the letter \"s\" in them",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHdoZXJlIExvY2F0aW9uIGNvbnRhaW5zICdzJw=="
                                         }
                                     ],
                           "Count":  1
@@ -215,15 +216,23 @@
                                         {
                                             "name":  "BetweenEx1",
                                             "question":  "Return rows from the Weather table with a Low between 20 and 22",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHdoZXJlIExvdyBiZXR3ZWVuICgyMCAuLiAyMik="
                                         },
                                         {
                                             "name":  "BetweenEx2",
                                             "question":  "Return rows from the Weather table with Rain between 0.8 and 1",
-                                            "dataset":  "Weather"
-                                        }
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHdoZXJlIFJhaW4gYmV0d2VlbiAoMC44IC4uIDEp"
+                                        },
+                                        {
+                                            "name":  "BetweenEx3",
+                                            "question":  "Return all rows where the time is between 2015-06-25 and 2015-06-30",
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHdoZXJlIFRpbWVHZW5lcmF0ZWQgYmV0d2VlbihkYXRldGltZSgiMjAxNS0wNi0yNSIpIC4uIGRhdGV0aW1lKCIyMDE1LTA2LTI5Iikp"
+                                        }        
                                     ],
-                          "Count":  2
+                          "Count":  3
                       }
     },
     {
@@ -235,7 +244,8 @@
                                         {
                                             "name":  "CaseEx1",
                                             "question":  "Extend a Feeling column that lists \"hot\" for High over 80, \"warm\" for High over 65, and \"cool\" for other Highs",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IGV4dGVuZCBGZWVsaW5nID0gY2FzZSAoSGlnaCA+IDgwLCAiaG90IiwgSGlnaCA+IDY1LCAid2FybSIsICJjb29sIik="
                                         }
                                     ],
                           "Count":  1
