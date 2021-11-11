@@ -22,7 +22,7 @@
                                             "question":  "Return 10 rows from the Weather table in the default order",
                                             "dataset":  "Weather",
                                             "answer" : "V2VhdGhlciB8IHRha2UgMTA="
-                                        }
+                                        }                                      
                                     ],
                           "Count":  3
                       }
@@ -177,11 +177,12 @@
         "tab":  "Overview",
         "section":  "Has",
         "exercises":  {
-                          "value":  [
+                                    "value":  [
                                         {
-                                            "name":  "HasEx1",
+                                            "name":  "HasEx2",
                                             "question":  "Return all records from the Mordor table that have the word \"cleared\" in the Message column",
-                                            "dataset":  "Mordor"
+                                            "dataset":  "Mordor",
+                                            "answer" : "TW9yZG9yIHwgd2hlcmUgTWVzc2FnZSBoYXMgJ2NsZWFyZWQn"
                                         }
                                     ],
                           "Count":  1
