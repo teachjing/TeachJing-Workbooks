@@ -379,7 +379,8 @@
                                         {
                                             "name":  "DcountEx1",
                                             "question":  "Return the number of distinct locations for each High in Weather sorted from most to least counts and highest to lowest temperatures",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBkY291bnQoTG9jYXRpb24pIGJ5IEhpZ2gKfCBzb3J0IGJ5IGRjb3VudF9Mb2NhdGlvbiBkZXNjLCBIaWdoIGRlc2M="
                                         }
                                     ],
                           "Count":  1
@@ -394,7 +395,8 @@
                                         {
                                             "name":  "DcountifEx1",
                                             "question":  "Return the number of distinct locations for each High in Weather if there was Rain that day sorted from most to least counts and highest to lowest temperatures",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHdoZXJlIFJhaW4gPiAwCnwgc3VtbWFyaXplIGRjb3VudChMb2NhdGlvbikgYnkgSGlnaAp8IHNvcnQgYnkgZGNvdW50X0xvY2F0aW9uIGRlc2MsIEhpZ2ggZGVzYw=="
                                         }
                                     ],
                           "Count":  1
@@ -409,7 +411,8 @@
                                         {
                                             "name":  "MaxEx1",
                                             "question":  "Return the hottest High temperature in Weather",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBtYXgoSGlnaCk="
                                         }
                                     ],
                           "Count":  1
@@ -424,7 +427,8 @@
                                         {
                                             "name":  "MinEx1",
                                             "question":  "Return the coldest Low temperature in Weather",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBtaW4oTG93KQ=="
                                         }
                                     ],
                           "Count":  1
@@ -439,7 +443,8 @@
                                         {
                                             "name":  "MvexpandEx1",
                                             "question":  "Transform the following datatable to expand EventID and Summary attributes into separate rows\u003cbr/\u003edatatable(LogType:string,WinEvents:dynamic) [\"Sysmon\",dynamic({\"EventID\":\"1102\",\"Summary\":\"The audit log was cleared\"})]",
-                                            "dataset":  ""
+                                            "dataset":  "Sysmon",
+                                            "answer" : "ZGF0YXRhYmxlKExvZ1R5cGU6c3RyaW5nLFdpbkV2ZW50czpkeW5hbWljKSBbIlN5c21vbiIsZHluYW1pYyh7IkV2ZW50SUQiOiIxMTAyIiwiU3VtbWFyeSI6IlRoZSBhdWRpdCBsb2cgd2FzIGNsZWFyZWQifSldCnwgbXZleHBhbmQgV2luRXZlbnRz"
                                         }
                                     ],
                           "Count":  1
