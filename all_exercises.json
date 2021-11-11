@@ -276,8 +276,9 @@
                           "value":  [
                                         {
                                             "name":  "IffEx1",
-                                            "question":  "Project the Message column from Mordor extending a default Severity of \"Unknown\" and \"High\" where Message has \"cleared\"",
-                                            "dataset":  "Mordor"
+                                            "question":  "Extend a new column that will check if its raining or not based on the Rain value is greater than 0.",
+                                            "dataset":  "Mordor",
+                                            "answer" : "V2VhdGhlcgp8IGV4dGVuZCBpc3JhaW5pbmcgPSBpZmYoUmFpbiA+IDAsICJyYWluaW5nIiwgIm5vdCByYWluaW5nIik="
                                         }
                                     ],
                           "Count":  1
