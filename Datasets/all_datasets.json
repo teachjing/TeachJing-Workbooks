@@ -1,6 +1,12 @@
 { "tables" :
-    {
-        "Weather" : "ZXh0ZXJuYWxkYXRhIChUaW1lR2VuZXJhdGVkOmRhdGV0aW1lLCBMb3c6cmVhbCwgSGlnaDpyZWFsLCBSYWluOnJlYWwsIExvY2F0aW9uOnN0cmluZykgW2gnaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3RlYWNoamluZy9UZWFjaEppbmctV29ya2Jvb2tzL21haW4vRGF0YXNldHMvV2VhdGhlci5qc29uJ10Kd2l0aCAoZm9ybWF0PSJtdWx0aWpzb24iKTs=",
-        "StormEvents" : "YWR4KCdodHRwczovL2hlbHAua3VzdG8ud2luZG93cy5uZXQvU2FtcGxlcycpLlN0b3JtRXZlbnRz"
-    }
+    [
+        {
+            "name" : "Weather",
+            "kql_reference" : "ZXh0ZXJuYWxkYXRhIChUaW1lR2VuZXJhdGVkOmRhdGV0aW1lLCBMb3c6cmVhbCwgSGlnaDpyZWFsLCBSYWluOnJlYWwsIExvY2F0aW9uOnN0cmluZykgW2gnaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3RlYWNoamluZy9UZWFjaEppbmctV29ya2Jvb2tzL21haW4vRGF0YXNldHMvV2VhdGhlci5qc29uJ10Kd2l0aCAoZm9ybWF0PSJtdWx0aWpzb24iKTs="
+        },
+        {
+            "name" : "StormEvents",
+            "kql_reference" : "YWR4KCdodHRwczovL2hlbHAua3VzdG8ud2luZG93cy5uZXQvU2FtcGxlcycpLlN0b3JtRXZlbnRz"
+        }
+    ]
 }
