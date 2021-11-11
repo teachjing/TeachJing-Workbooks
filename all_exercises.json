@@ -378,6 +378,12 @@
                           "value":  [
                                         {
                                             "name":  "DcountEx1",
+                                            "question":  "Return unique Low temperatures and group the count by location",
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBMb3dzID0gZGNvdW50KExvdykgYnkgTG9jYXRpb24="
+                                        },                                  
+                                        {
+                                            "name":  "DcountEx2",
                                             "question":  "Return the number of distinct locations for each High in Weather sorted from most to least counts and highest to lowest temperatures",
                                             "dataset":  "Weather",
                                             "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBkY291bnQoTG9jYXRpb24pIGJ5IEhpZ2gKfCBzb3J0IGJ5IGRjb3VudF9Mb2NhdGlvbiBkZXNjLCBIaWdoIGRlc2M="
