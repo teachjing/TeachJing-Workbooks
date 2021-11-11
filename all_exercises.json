@@ -94,13 +94,14 @@
                                         {
                                             "name":  "SummarizeEx5",
                                             "question":  "Return a summary of Locations from the Weather table in descending order of Location",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBieSBMb2NhdGlvbgp8IHNvcnQgYnkgTG9jYXRpb24gZGVzYw=="
                                         },
                                         {
                                             "name":  "SummarizeEx6",
                                             "question":  "Return a summary of the total number of rows with rainfall",
                                             "dataset":  "Weather",
-                                            "answer" : "V2VhdGhlcgp8IHN1bW1hcml6ZSBjb3VudGlmKFJhaW4gPD4gMCk="
+                                            "answer" : "V2VhdGhlcgp8IHdoZXJlIFJhaW4gPiAwCnwgc3VtbWFyaXplIGNvdW50KCk="
                                         }
                                     ],
                           "Count":  5
