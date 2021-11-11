@@ -546,7 +546,8 @@
                                         {
                                             "name":  "ExternalDataEx1",
                                             "question":  "Return a new datatable based on the following TIC 3.0 mapping CSV\u003cbr/\u003ehttps://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Sample%20Data/Feeds/ZeroTrustTIC3Mapping.csv",
-                                            "dataset":  "bGV0IEV4dGVybmFsVGFibGUgPSBleHRlcm5hbGRhdGEoUmVjb21tZW5kYXRpb25EaXNwbGF5TmFtZTpzdHJpbmcsIENhcGJpbGl0eTpzdHJpbmcsIEZhbWlseTpzdHJpbmcpCltAJ2h0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90ZWFjaGppbmcvVGVhY2hKaW5nLVdvcmtib29rcy9tYWluL0RhdGFzZXRzL1plcm9UcnVzdFRJQzNNYXBwaW5nLmNzdiddCndpdGggKGZvcm1hdD1jc3YpOwpFeHRlcm5hbFRhYmxl"
+                                            "dataset" : "",
+                                            "answer":  "bGV0IEV4dGVybmFsVGFibGUgPSBleHRlcm5hbGRhdGEoUmVjb21tZW5kYXRpb25EaXNwbGF5TmFtZTpzdHJpbmcsIENhcGJpbGl0eTpzdHJpbmcsIEZhbWlseTpzdHJpbmcpCltAJ2h0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90ZWFjaGppbmcvVGVhY2hKaW5nLVdvcmtib29rcy9tYWluL0RhdGFzZXRzL1plcm9UcnVzdFRJQzNNYXBwaW5nLmNzdiddCndpdGggKGZvcm1hdD1jc3YpOwpFeHRlcm5hbFRhYmxl"
                                         }
                                     ],
                           "Count":  1
