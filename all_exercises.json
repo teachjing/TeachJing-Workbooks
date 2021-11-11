@@ -306,7 +306,8 @@
                                         {
                                             "name":  "SortEx1",
                                             "question":  "Sort Weather results by amount of Rain from most to least",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IHNvcnQgYnkgUmFpbiBkZXNj"
                                         }
                                     ],
                           "Count":  1
