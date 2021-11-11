@@ -459,7 +459,8 @@
                                         {
                                             "name":  "DatatableEx1",
                                             "question":  "Create a custom datatable of cities with Location of Boston, Chicago, and Portland",
-                                            "dataset":  ""
+                                            "dataset":  "",
+                                            "answer" : "ZGF0YXRhYmxlIChMb2NhdGlvbjpzdHJpbmcpIFsKICAgICJCb3N0b24iLCJDaGljYWdvIiwiUG9ydGxhbmQiCl0="
                                         }
                                     ],
                           "Count":  1
@@ -489,7 +490,8 @@
                                         {
                                             "name":  "ExtendEx1",
                                             "question":  "Add a Range column to Weather that contains the difference between High and Low temperatures",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "V2VhdGhlcgp8IGV4dGVuZCBSYW5nZSA9IEhpZ2gtTG93"
                                         }
                                     ],
                           "Count":  1
@@ -504,7 +506,8 @@
                                         {
                                             "name":  "UnionEx1",
                                             "question":  "Combine these two cities datatables into a single datatable using the union statement\u003cbr/\u003elet cities1 = datatable(Location:string)[\"Boston\",\"Eugene\",\"Houston\"];\u003cbr/\u003elet cities2 = datatable(Location:string)[\"Boise\",\"Chicago\",\"Tampa\"];",
-                                            "dataset":  ""
+                                            "dataset":  "",
+                                            "answer" : "bGV0IGNpdGllczEgPSBkYXRhdGFibGUoTG9jYXRpb246c3RyaW5nKVsiQm9zdG9uIiwiRXVnZW5lIiwiSG91c3RvbiJdOwpsZXQgY2l0aWVzMiA9IGRhdGF0YWJsZShMb2NhdGlvbjpzdHJpbmcpWyJCb2lzZSIsIkNoaWNhZ28iLCJUYW1wYSJdOwpjaXRpZXMxCnwgdW5pb24gY2l0aWVzMg=="
                                         }
                                     ],
                           "Count":  1
@@ -519,7 +522,8 @@
                                         {
                                             "name":  "JoinEx1",
                                             "question":  "Add state data to the Weather table with a left inner join using the following states datatable\u003cbr/\u003elet states = datatable(Location:string,State:string)[\"Houston\",\"TX\",\"Philadelphia\",\"PA\",\"Indianapolis\",\"IN\",\"New York City\",\"NY\",\"Seattle\",\"WA\"];",
-                                            "dataset":  "Weather"
+                                            "dataset":  "Weather",
+                                            "answer" : "bGV0IHN0YXRlcyA9IGRhdGF0YWJsZShMb2NhdGlvbjpzdHJpbmcsU3RhdGU6c3RyaW5nKVsiSG91c3RvbiIsIlRYIiwiUGhpbGFkZWxwaGlhIiwiUEEiLCJJbmRpYW5hcG9saXMiLCJJTiIsIk5ldyBZb3JrIENpdHkiLCJOWSIsIlNlYXR0bGUiLCJXQSJdOwpXZWF0aGVyCnwgam9pbiBzdGF0ZXMgb24gTG9jYXRpb24sICRsZWZ0LkxvY2F0aW9uID09ICRyaWdodC5Mb2NhdGlvbg=="
                                         }
                                     ],
                           "Count":  1
@@ -534,7 +538,7 @@
                                         {
                                             "name":  "ExternalDataEx1",
                                             "question":  "Return a new datatable based on the following TIC 3.0 mapping CSV\u003cbr/\u003ehttps://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Sample%20Data/Feeds/ZeroTrustTIC3Mapping.csv",
-                                            "dataset":  ""
+                                            "dataset":  "bGV0IEV4dGVybmFsVGFibGUgPSBleHRlcm5hbGRhdGEoUmVjb21tZW5kYXRpb25EaXNwbGF5TmFtZTpzdHJpbmcsIENhcGJpbGl0eTpzdHJpbmcsIEZhbWlseTpzdHJpbmcpCltAJ2h0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90ZWFjaGppbmcvVGVhY2hKaW5nLVdvcmtib29rcy9tYWluL0RhdGFzZXRzL1plcm9UcnVzdFRJQzNNYXBwaW5nLmNzdiddCndpdGggKGZvcm1hdD1jc3YpOwpFeHRlcm5hbFRhYmxl"
                                         }
                                     ],
                           "Count":  1
