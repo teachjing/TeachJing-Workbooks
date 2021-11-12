@@ -285,21 +285,6 @@
                       }
     },
     {
-        "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/parseoperator\u003cbr/\u003e\u003cbr/\u003eThe parse operator evaluates a string expression and parses its value into one or more calculated columns. The columns will have nulls, for unsuccessfully parsed strings. If there is no need to use rows where parsing doesn\u0027t succeed, use the parse-where operator.\u003cbr/\u003e\u003cbr/\u003eSyntax: T | parse [kind=regex [flags=regex_flags] |simple|relaxed] Expression with *\u003cbr/\u003e\u003cbr/\u003eArguments:\u003cbr/\u003e\u003cbr/\u003eT is the input table. kind: simple (the default): StringConstant is a regular string value and the match is strict. All string delimiters should appear in the parsed string, and all extended columns must match the required types.\u003cbr/\u003e\u003cbr/\u003eregex: StringConstant may be a regular expression and the match is strict. All string delimiters, which can be a regex for this mode, should appear in the parsed string, and all extended columns must match the required types.\u003cbr/\u003e\u003cbr/\u003eflags: Flags to be used in regex mode like U (Ungreedy), m (multi-line mode), s (match new line \\n), i (case-insensitive) in RE2 flags.\u003cbr/\u003e\u003cbr/\u003erelaxed: StringConstant is a regular string value and the match is relaxed. All string delimiters should appear in the parsed string, but extended columns may partially match the required types.\u003cbr/\u003e",
-        "tab":  "Scalar",
-        "section":  "Parse",
-        "exercises":  {
-                          "value":  [
-                                        {
-                                            "name":  "ParseEx1",
-                                            "question":  "Return Message values from rows with EventID 1102 in Mordor and parse Message into Subject, ID, AccountName, DomainName, and LogonID",
-                                            "dataset":  "Mordor"
-                                        }
-                                    ],
-                          "Count":  1
-                      }
-    },
-    {
         "markdown":  "\u003cbr/\u003e\u003cbr/\u003e\u003cbr/\u003eDocumentation: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/sortoperator\u003cbr/\u003e\u003cbr/\u003eThe sort operator sorts the rows of the input table in order by one or more columns.\u003cbr/\u003eExample:\u003cbr/\u003e\u003cbr/\u003eSecurtiyEvent | where eventID == \u00274624\u0027 | sort by TimeGenerated desc\u003cbr/\u003e",
         "tab":  "Scalar",
         "section":  "Sort",
