@@ -446,7 +446,7 @@
                                         },
                                         {
                                             "name":  "MvexpandEx2",
-                                            "question":  "Use mvexpand to extend a new column 'kid_name' from the 'parents' table.",
+                                            "question":  "Use mvexpand to expand `kids` from the 'parents' table.",
                                             "dataset":  "parents",
                                             "answer" : "cGFyZW50cwp8IG12LWV4cGFuZCBraWRz"
                                         }
