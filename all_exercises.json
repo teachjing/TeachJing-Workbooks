@@ -310,8 +310,9 @@
                           "value":  [
                                         {
                                             "name":  "ToDynamicEx1",
-                                            "question":  "Convert WinEvents from the following table to dynamic and return rows that have an EventID of 1102\u003cbr/\u003edatatable(WinEvents:string) [\u0027{\"EventID\":\"1102\",\"Summary\":\"The audit log was cleared\"}\u0027,\u0027{\"EventID\":\"4739\",\"Summary\":\"Domain policy was changed\"}\u0027]",
-                                            "dataset":  ""
+                                            "question":  "Convert WinEvents from the table 'Events' to dynamic and return rows that have an EventID of 1102",
+                                            "dataset":  "Events",
+                                            "answer" : "Events | where WinEvents == '1102'"
                                         }
                                     ],
                           "Count":  1

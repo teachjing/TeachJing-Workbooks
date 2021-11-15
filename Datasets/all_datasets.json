@@ -15,6 +15,10 @@
         {
             "name" : "userlogins",
             "kql_reference": "cmFuZ2UgdXNlciBmcm9tIDEgdG8gMTAwIHN0ZXAgMQp8IGV4dGVuZCB1c2VybmFtZSA9ICJib2IiCnwgZXh0ZW5kIFRpbWVHZW5lcmF0ZWQgPSBub3coKS11c2VyKjFkCnwgZXh0ZW5kIG1lc3NhZ2UgPSAidXNlciBib2IgbG9nZ2VkIGluIjs="
+        },
+        {
+            "name" : "Events",
+            "kql_reference": "ZGF0YXRhYmxlKFdpbkV2ZW50czpzdHJpbmcpIFsneyJFdmVudElEIjoiMTEwMiIsIlN1bW1hcnkiOiJUaGUgYXVkaXQgbG9nIHdhcyBjbGVhcmVkIn0nLCd7IkV2ZW50SUQiOiI0NzM5IiwiU3VtbWFyeSI6IkRvbWFpbiBwb2xpY3kgd2FzIGNoYW5nZWQifSdd"
         }
     ]
 }
