@@ -443,9 +443,15 @@
                                             "question":  "Use mvexpand to expand the name column in the 'shapes' table to individual rows.",
                                             "dataset":  "shapes",
                                             "answer" : "c2hhcGVzCnwgbXZleHBhbmQgbmFtZQ=="
+                                        },
+                                        {
+                                            "name":  "MvexpandEx2",
+                                            "question":  "Use mvexpand to extend a new column 'kid_name' from the 'parents' table.",
+                                            "dataset":  "parents",
+                                            "answer" : "cGFyZW50cwp8IG12LWV4cGFuZCBraWRz"
                                         }
                                     ],
-                          "Count":  1
+                          "Count":  2
                       }
     },
     {

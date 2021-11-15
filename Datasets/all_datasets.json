@@ -23,6 +23,10 @@
         {
             "name" : "shapes",
             "kql_reference" : "ZGF0YXRhYmxlIChuYW1lOiBzdHJpbmcsIHNpZGVDb3VudDogaW50KQpbCiAgICAidHJpYW5nbGUiLCAzLAogICAgInNxdWFyZSIsIDQsCiAgICAicmVjdGFuZ2xlIiwgNCwKICAgICJwZW50YWdvbiIsIDUsCiAgICAiaGV4YWdvbiIsIDYsCiAgICAiaGVwdGFnb24iLCA3LAogICAgIm9jdG9nb24iLCA4LAogICAgIm5vbmFnb24iLCA5LAogICAgImRlY2Fnb24iLCAxMApdCnwgc3VtbWFyaXplIG5hbWUgPSBtYWtlX2xpc3QobmFtZSk="
-        }
+        },
+        {
+            "name" : "parents",
+            "kql_reference" : "ZGF0YXRhYmxlIChuYW1lOiBzdHJpbmcsIGtpZHM6ZHluYW1pYykKWwogICAgIlNhbSIsIGR5bmFtaWMoWydTYW0gSnInLCdKZW5ueScsJ1NhbWFudGhhJ10pLAogICAgIkplbm4iLGR5bmFtaWMoWydwZXRlciddKSwKICAgICJCb2IiLGR5bmFtaWMoWydCaWxseScsJ1NhbW15J10pCl0="
+        }        
     ]
 }
