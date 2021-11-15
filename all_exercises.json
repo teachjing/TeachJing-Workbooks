@@ -440,9 +440,9 @@
                           "value":  [
                                         {
                                             "name":  "MvexpandEx1",
-                                            "question":  "Transform the following datatable to expand EventID and Summary attributes into separate rows\u003cbr/\u003edatatable(LogType:string,WinEvents:dynamic) [\"Sysmon\",dynamic({\"EventID\":\"1102\",\"Summary\":\"The audit log was cleared\"})]",
-                                            "dataset":  "Sysmon",
-                                            "answer" : "ZGF0YXRhYmxlKExvZ1R5cGU6c3RyaW5nLFdpbkV2ZW50czpkeW5hbWljKSBbIlN5c21vbiIsZHluYW1pYyh7IkV2ZW50SUQiOiIxMTAyIiwiU3VtbWFyeSI6IlRoZSBhdWRpdCBsb2cgd2FzIGNsZWFyZWQifSldCnwgbXZleHBhbmQgV2luRXZlbnRz"
+                                            "question":  "Use mvexpand to expand the name column in the 'shapes' table to individual rows.",
+                                            "dataset":  "shapes",
+                                            "answer" : "c2hhcGVzCnwgbXZleHBhbmQgbmFtZQ=="
                                         }
                                     ],
                           "Count":  1
