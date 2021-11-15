@@ -11,6 +11,10 @@
         {
             "name" : "StormEvents",
             "kql_reference" : "YWR4KCdodHRwczovL2hlbHAua3VzdG8ud2luZG93cy5uZXQvU2FtcGxlcycpLlN0b3JtRXZlbnRz"
+        },
+        {
+            "name" : "userlogins",
+            "kql_reference": "cmFuZ2UgdXNlciBmcm9tIDEgdG8gMTAwIHN0ZXAgMQp8IGV4dGVuZCB1c2VybmFtZSA9ICJib2IiCnwgZXh0ZW5kIFRpbWVHZW5lcmF0ZWQgPSBub3coKS11c2VyKjFkCnwgZXh0ZW5kIG1lc3NhZ2UgPSAidXNlciBib2IgbG9nZ2VkIGluIjs="
         }
     ]
 }
