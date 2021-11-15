@@ -310,9 +310,9 @@
                           "value":  [
                                         {
                                             "name":  "ToDynamicEx1",
-                                            "question":  "Convert WinEvents from the table 'Events' to dynamic and return rows that have an EventID of 1102",
+                                            "question":  "Convert WinEvents from the table 'Events' to dynamic. Extend a new column called EventID and reference the EventID from WinEvents. Then return rows that have an EventID of 1102. Ensure your Output looks like the output in the 'expected result'.",
                                             "dataset":  "Events",
-                                            "answer" : "Events | where WinEvents == '1102'"
+                                            "answer" : "RXZlbnRzCnwgZXh0ZW5kIFdpbkV2ZW50cyA9IHRvZHluYW1pYyhXaW5FdmVudHMpCnwgZXh0ZW5kIEV2ZW50SUQgPSBXaW5FdmVudHMuRXZlbnRJRAp8IHdoZXJlIEV2ZW50SUQgPT0gIjExMDIi"
                                         }
                                     ],
                           "Count":  1
