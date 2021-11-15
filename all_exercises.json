@@ -198,12 +198,14 @@
                                         {
                                             "name":  "AgoEx1",
                                             "question":  "Return all 'userlogins' table records from the last 7 days",
-                                            "dataset":  "userlogins"
+                                            "dataset":  "userlogins",
+                                            "answer" : "dXNlcmxvZ2lucwp8IHdoZXJlIFRpbWVHZW5lcmF0ZWQgPiBhZ28oN2Qp"
                                         },
                                         {
                                             "name":  "AgoEx2",
                                             "question":  "Return all 'userlogins' table records from more than 30 days ago",
-                                            "dataset":  "userlogins"
+                                            "dataset":  "userlogins",
+                                            "answer" : "dXNlcmxvZ2lucwp8IHdoZXJlIFRpbWVHZW5lcmF0ZWQgPiBhZ28oMzBkKQ=="
                                         }
                                     ],
                           "Count":  2
