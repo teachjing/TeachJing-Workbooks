@@ -197,13 +197,13 @@
                           "value":  [
                                         {
                                             "name":  "AgoEx1",
-                                            "question":  "Return all Mordor table records from the last 2 days",
-                                            "dataset":  "Mordor"
+                                            "question":  "Return all 'userlogins' table records from the last 7 days",
+                                            "dataset":  "userlogins"
                                         },
                                         {
                                             "name":  "AgoEx2",
-                                            "question":  "Return all Mordor table records from more than 6 days ago",
-                                            "dataset":  "Mordor"
+                                            "question":  "Return all 'userlogins' table records from more than 30 days ago",
+                                            "dataset":  "userlogins"
                                         }
                                     ],
                           "Count":  2
