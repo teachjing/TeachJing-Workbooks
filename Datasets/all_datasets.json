@@ -19,6 +19,10 @@
         {
             "name" : "Events",
             "kql_reference": "ZGF0YXRhYmxlKFdpbkV2ZW50czpzdHJpbmcpIFsneyJFdmVudElEIjoiMTEwMiIsIlN1bW1hcnkiOiJUaGUgYXVkaXQgbG9nIHdhcyBjbGVhcmVkIn0nLCd7IkV2ZW50SUQiOiI0NzM5IiwiU3VtbWFyeSI6IkRvbWFpbiBwb2xpY3kgd2FzIGNoYW5nZWQifSdd"
+        },
+        {
+            "name" : "shapes",
+            "kql_reference" : "ZGF0YXRhYmxlIChuYW1lOiBzdHJpbmcsIHNpZGVDb3VudDogaW50KQpbCiAgICAidHJpYW5nbGUiLCAzLAogICAgInNxdWFyZSIsIDQsCiAgICAicmVjdGFuZ2xlIiwgNCwKICAgICJwZW50YWdvbiIsIDUsCiAgICAiaGV4YWdvbiIsIDYsCiAgICAiaGVwdGFnb24iLCA3LAogICAgIm9jdG9nb24iLCA4LAogICAgIm5vbmFnb24iLCA5LAogICAgImRlY2Fnb24iLCAxMApdCnwgc3VtbWFyaXplIG5hbWUgPSBtYWtlX2xpc3QobmFtZSk="
         }
     ]
 }
