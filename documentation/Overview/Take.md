@@ -1,4 +1,4 @@
-[![Goto Documentation](https://shields.io/badge/-Documentation-informational)](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/takeoperator)
+[![Goto Documentation](https://shields.io/badge/-Goto_Documentation-informational)](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/takeoperator)
 
 ****Summary:****
 
