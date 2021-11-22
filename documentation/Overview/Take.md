@@ -1,5 +1,3 @@
-<![endif]-->
-
 ![Documentation](https://shields.io/badge/-Documentation-informational)
 
 <p>
