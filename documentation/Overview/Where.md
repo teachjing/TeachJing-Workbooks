@@ -1,7 +1,4 @@
-![Documentation](https://shields.io/badge/-Documentation-informational)
-<p>
- https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/whereoperator
-</p>
+[![Documentation](https://shields.io/badge/-Goto_Documentation-informational)]( https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/whereoperator)
 
 **Summary:**
 <p>
