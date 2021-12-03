@@ -480,7 +480,7 @@
                                             "name":  "LetEx1",
                                             "question":  "Create a variable called SeattleLows and set its value to be all cold temperatures for Seattle. Print the value of the variable in descending order.",
                                             "dataset":  "Weather",
-                                            "answer": "bGV0IFNlYXR0bGVMb3dzID0gV2VhdGhlciB8IHdoZXJlIExvY2F0aW9uID09ICdTZWF0dGxlJyB8IHN1bW1hcml6ZSBieSBMb3cgfCBvcmRlciBieSBMb3cgZGVzYzs="
+                                            "answer": "IGxldCBTZWF0dGxlTG93cyA9IFdlYXRoZXIgfCB3aGVyZSBMb2NhdGlvbiA9PSAnU2VhdHRsZScgfCBzdW1tYXJpemUgYnkgTG93IHwgb3JkZXIgYnkgTG93IGRlc2M7IFNlYXR0bGVMb3dz"
                                         },
                                         {
                                             "name":  "LetEx2",
