@@ -478,8 +478,15 @@
                           "value":  [
                                         {
                                             "name":  "LetEx1",
-                                            "question":  "Find the the largest ProcessId in Mordor and store it in a variable as a scalar. Then use that variable to filter the full Mordor dataset to only return rows with that ProcessId.",
-                                            "dataset":  "Mordor"
+                                            "question":  "Create a variable called SeattleLows and set its value to be all cold temperatures for Seattle. Print the value of the variable in descending order.",
+                                            "dataset":  "Weather",
+                                            "answer": "bGV0IFNlYXR0bGVMb3dzID0gV2VhdGhlciB8IHdoZXJlIExvY2F0aW9uID09ICdTZWF0dGxlJyB8IHN1bW1hcml6ZSBieSBMb3cgfCBvcmRlciBieSBMb3cgZGVzYzs="
+                                        },
+                                        {
+                                            "name":  "LetEx2",
+                                            "question":  "create two variables called startTime and endTime. Set startTime to be 06/26/2015 and endTime to be 06/27/2015. Return all results for New York City during that time. Note: datetime uses UTC so there may be a 7 hour time difference in the logs generated. If you see results from 06/22, add 7 hours to startTime to remove the extras.",
+                                            "dataset":  "Weather",
+                                            "answer": "bGV0IHN0YXJ0VGltZSA9IGRhdGV0aW1lKDA2LzIzLzIwMTUgMDc6MDA6MDApOyBsZXQgZW5kVGltZSA9IGRhdGV0aW1lKDA2LzI1LzIwMTUgMDA6MDA6MDApOyBXZWF0aGVyIHwgd2hlcmUgVGltZUdlbmVyYXRlZCBiZXR3ZWVuKHN0YXJ0VGltZS4uZW5kVGltZSkgfCB3aGVyZSBMb2NhdGlvbiA9PSAnTmV3IFlvcmsgQ2l0eSc="
                                         }
                                     ],
                           "Count":  1
